@@ -1,0 +1,6 @@
+github.com/go-asn1-ber/asn1-ber v1.5.4 h1:vXT6d/FNDiELJnLb6hGNa309LMsrCoYFvpwHDF0+Y1A=
+github.com/go-asn1-ber/asn1-ber v1.5.4/go.mod h1:hEBeB/ic+5LoWskz+yKT7vGhhPYkProFKoKdwZRWMe0=
+github.com/markretallack/ber v0.0.0-20201214203748-b7435fd8c2aa h1:T3Ykb/LE2XEjiFkg6B4fJW0ldzKJdBGgNAEuQCn4JNU=
+github.com/markretallack/ber v0.0.0-20201214203748-b7435fd8c2aa/go.mod h1:jVPKeCbj6MvQZhwLYsGwaGI52oUorHoHKNecGT85ZCc=
+github.com/markretallack/ber v0.0.0-20230329115818-1718b1974ea8 h1:zZyAwKXZGgiIYV+Zm+dOdBa9K3aH7dF9iPrg5Z5GmVA=
+github.com/markretallack/ber v0.0.0-20230329115818-1718b1974ea8/go.mod h1:SAucwRP/aSMMtrJSDVh3QPR08W5Ds096v8dwgYtxkgI=
