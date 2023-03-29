@@ -1,3 +1,7 @@
 [submodule "golang/chemikadze-asn1go"]
 	path = golang/chemikadze-asn1go
-	url = https://github.com/chemikadze/asn1go.git
+	url = https://github.com/markretallack/asn1go.git
+[submodule "golang/ber"]
+	path = golang/ber
+	url = https://github.com/markretallack/ber 
+	
