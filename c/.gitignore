@@ -1,0 +1,5 @@
+*.o
+
+/ISO10711.asn
+/ISO14927-1.asn
+/converter-sample

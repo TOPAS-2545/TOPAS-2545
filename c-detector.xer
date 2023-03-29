@@ -1,0 +1,18 @@
+<IPMSTSCD-Data>
+    <detectorController-index>1</detectorController-index>
+    <ipmstscdDetData>
+        <SEQUENCE>
+            <ipmstscdDetID>0</ipmstscdDetID>
+            <ipmstscdDetType><loopTypeDetector/></ipmstscdDetType>
+            <ipmstscdDetInformation>
+                <loopTypeDetInf>
+                    <loopOccupancyState><true/></loopOccupancyState>
+                    <loopOccupancyStateDuration>33</loopOccupancyStateDuration>
+                    <loopOccupancyPreviousStateDuration>33</loopOccupancyPreviousStateDuration>
+                    <loopOccupancyRate>55.799999999999997</loopOccupancyRate>
+                    <loopVolume>66</loopVolume>
+                </loopTypeDetInf>
+            </ipmstscdDetInformation>
+        </SEQUENCE>
+    </ipmstscdDetData>
+</IPMSTSCD-Data>
