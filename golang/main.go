@@ -9,7 +9,7 @@ import (
     //"encoding/asn1"
     "fmt"
     "testapp/ipmtscd"   
-    "github.com/markretallack/ber"
+    "github.com/TOPAS-2545/ber"
 )
 
 func check(e error) {

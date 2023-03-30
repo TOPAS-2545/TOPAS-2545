@@ -1,6 +1,6 @@
 package IPMTSCD
 
-import "github.com/markretallack/ber"
+import "github.com/TOPAS-2545/ber"
 
 type Time struct {
 	Time_Year_qty		int64	`asn1:"optional"`
