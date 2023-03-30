@@ -5,10 +5,11 @@ This repo contains the example implememtations for the "Intelligent Transport Sy
 ## TODO
 
 * [x] Move golang deps under the TOPAS repo
-* [ ] Add description of how the golang system works
+* [x] Add description of how the golang system works
 * [x] Add test framework
 * [x] Add Licence
-* [ ] Add Docker version for easier testing
+* [x] Add Docker version for easier testing
+* [ ] Copyright assignment to TOPAS
 
 # Description
 

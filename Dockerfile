@@ -20,16 +20,17 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-../python-detector.ber: ../detection.json
-	@python3 -m venv venv
-	@. venv/bin/activate && pip3 install -r requirements.txt
-	@. venv/bin/activate && python3 det_encoder.py $(addprefix ../, ${ASNFILES}) 
-	
 
-# rule to test the different files generated
-test:
-	@python3 -m venv venv
-	@. venv/bin/activate && pip3 install -r requirements.txt
-	@. venv/bin/activate && python3 test.py $(addprefix ../, ${ASNFILES}) 
-	
-	
+FROM debian:testing
+
+RUN apt-get update && \
+        apt-get install -y  \
+            asn1c make golang python3 python3-venv python3-pip
+
+WORKDIR /build 
+
+ADD . /build 
+
+# perform a compile and run
+RUN make build_all run_all
+
