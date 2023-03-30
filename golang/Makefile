@@ -7,10 +7,9 @@ generate: ISO10711-OneModule.asn
 build: ISO10711-OneModule.asn
 	go build
 
-# rule to run the encode and decode
+# rule to run the decode and then encode
 run:
-	./testapp -m encode
-	./testapp -m decode
+	./testapp -m recode	
 
 # check for the asn1 file
 ISO10711-OneModule.asn:

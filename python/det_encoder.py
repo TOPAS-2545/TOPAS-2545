@@ -47,5 +47,13 @@ print(res)
 with open("../python-detector.xer", "wb") as newfile:
     newfile.write(bytearray(res))
     
+
+res = derEncoder.encode("IPMSTSCD-Data", decodedMessage)
+
+print(res)
+
+with open("../python-detector.der", "wb") as newfile:
+    newfile.write(bytearray(res))
+    
     
     

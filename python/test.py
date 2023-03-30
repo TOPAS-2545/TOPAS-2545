@@ -41,6 +41,11 @@ tests = [
                 "decoder":"xer"
             },
             {
+                "srcfile":"../c-detector.ber", 
+                "binary": True,
+                "decoder":"ber"
+            },
+            {
                 "srcfile":"../golang-detector.ber", 
                 "binary": True,
                 "decoder":"ber"

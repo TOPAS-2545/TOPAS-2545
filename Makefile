@@ -58,8 +58,10 @@ run_python:
 
 # Run the C version
 run_c:
-	# check that we can create ber encoded data
+	# check that we can parse the ber formated data into XML
 	@c/converter-sample -iber -oxer python-detector.ber > c-detector.xer
+	# we then recode it as DER (DER is a subset of BER so are compatable)
+	@c/converter-sample -ixer -oder python-detector.xer > c-detector.ber
 
 run_go:
 	@${MAKE} -C golang run
