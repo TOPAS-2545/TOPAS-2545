@@ -27,10 +27,10 @@ type IPMSTSCD_Data struct {
 	}	`asn1:"optional"`
 }
 type GeneralTimeLocationCore struct {
-	Otdv_CurrentTime	Time
-	Otdv_LocationLongitude	int64	`asn1:"optional"`
-	Otdv_LocationLatitude	int64	`asn1:"optional"`
-	Otdv_LocationElevation	int64	`asn1:"optional"`
+	Otdv_CurrentTime	Time	`asn1:"explicit,tag:0"`
+	Otdv_LocationLongitude	int64	`asn1:"optional,explicit,tag:1"`
+	Otdv_LocationLatitude	int64	`asn1:"optional,explicit,tag:2"`
+	Otdv_LocationElevation	int64	`asn1:"optional,explicit,tag:3"`
 }
 type IpmstscdLoopTypeDetectorInformation struct {
 	LoopDataDuration			int64				`asn1:"optional,explicit,tag:0"`

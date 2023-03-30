@@ -30,9 +30,6 @@ typedef enum ipmstscdDetType {
 	ipmstscdDetType_loopTypeDetector	= 0,
 	ipmstscdDetType_imageTypeDetector	= 1,
 	ipmstscdDetType_idBaseTypeDetector	= 2
-	/*
-	 * Enumeration is extensible
-	 */
 } e_ipmstscdDetType;
 typedef enum ipmstscdDetInformation_PR {
 	ipmstscdDetInformation_PR_NOTHING,	/* No components present */

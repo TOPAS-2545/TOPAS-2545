@@ -190,7 +190,7 @@ asn_TYPE_descriptor_t asn_DEF_loopOccNoccHistory_9 = {
 	0,	/* Use generic outmost tag fetcher */
 	asn_DEF_loopOccNoccHistory_tags_9,
 	sizeof(asn_DEF_loopOccNoccHistory_tags_9)
-		/sizeof(asn_DEF_loopOccNoccHistory_tags_9[0]) - 1, /* 1 */
+		/sizeof(asn_DEF_loopOccNoccHistory_tags_9[0]), /* 2 */
 	asn_DEF_loopOccNoccHistory_tags_9,	/* Same as above */
 	sizeof(asn_DEF_loopOccNoccHistory_tags_9)
 		/sizeof(asn_DEF_loopOccNoccHistory_tags_9[0]), /* 2 */
@@ -246,7 +246,7 @@ asn_TYPE_descriptor_t asn_DEF_loopErrorState_11 = {
 	0,	/* Use generic outmost tag fetcher */
 	asn_DEF_loopErrorState_tags_11,
 	sizeof(asn_DEF_loopErrorState_tags_11)
-		/sizeof(asn_DEF_loopErrorState_tags_11[0]) - 1, /* 1 */
+		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 2 */
 	asn_DEF_loopErrorState_tags_11,	/* Same as above */
 	sizeof(asn_DEF_loopErrorState_tags_11)
 		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 2 */
@@ -258,7 +258,7 @@ asn_TYPE_descriptor_t asn_DEF_loopErrorState_11 = {
 static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 	{ ATF_POINTER, 1, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopDataDuration),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -267,7 +267,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopOccupancyState),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_BOOLEAN,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -276,7 +276,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopOccupancyStateDuration),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_loopOccupancyStateDuration_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -285,7 +285,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopOccupancyPreviousStateDuration),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_loopOccupancyPreviousStateDuration_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -294,7 +294,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopOccupancyRate),
 		(ASN_TAG_CLASS_CONTEXT | (4 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeReal,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -303,7 +303,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_POINTER, 1, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopSpeed),
 		(ASN_TAG_CLASS_CONTEXT | (5 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeReal,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -312,7 +312,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopVolume),
 		(ASN_TAG_CLASS_CONTEXT | (6 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -330,7 +330,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_POINTER, 4, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopErrorState),
 		(ASN_TAG_CLASS_CONTEXT | (8 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_loopErrorState_11,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -339,7 +339,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_POINTER, 3, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopUserData),
 		(ASN_TAG_CLASS_CONTEXT | (9 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_OCTET_STRING,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -348,7 +348,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_POINTER, 2, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopTargetType),
 		(ASN_TAG_CLASS_CONTEXT | (10 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_loopTargetType_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -357,7 +357,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		},
 	{ ATF_POINTER, 1, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopDirectionDiscrimination),
 		(ASN_TAG_CLASS_CONTEXT | (11 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_BOOLEAN,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */

@@ -1,9 +1,10 @@
 
 
 build: 
-	cd chemikadze-asn1go/cmd/asn1go && go run main.go ../../../ISO-revE.asn ../../../ipmtscd/IPMTSCD.go
+	cd chemikadze-asn1go/cmd/asn1go && go run main.go ../../../ISO10711-OneModule.asn ../../../ipmtscd/IPMTSCD.go
 
 	go build
 
 run:
-	./testapp
+	./testapp -m encode
+	./testapp -m decode

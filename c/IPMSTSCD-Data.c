@@ -134,25 +134,22 @@ static const asn_INTEGER_enum_map_t asn_MAP_ipmstscdDetType_value2enum_7[] = {
 	{ 0,	16,	"loopTypeDetector" },
 	{ 1,	17,	"imageTypeDetector" },
 	{ 2,	18,	"idBaseTypeDetector" }
-	/* This list is extensible */
 };
 static const unsigned int asn_MAP_ipmstscdDetType_enum2value_7[] = {
 	2,	/* idBaseTypeDetector(2) */
 	1,	/* imageTypeDetector(1) */
 	0	/* loopTypeDetector(0) */
-	/* This list is extensible */
 };
 static const asn_INTEGER_specifics_t asn_SPC_ipmstscdDetType_specs_7 = {
 	asn_MAP_ipmstscdDetType_value2enum_7,	/* "tag" => N; sorted by tag */
 	asn_MAP_ipmstscdDetType_enum2value_7,	/* N => "tag"; sorted by N */
 	3,	/* Number of elements in the maps */
-	4,	/* Extensions before this member */
+	0,	/* Enumeration is not extensible */
 	1,	/* Strict enumeration */
 	0,	/* Native long size */
 	0
 };
 static const ber_tlv_tag_t asn_DEF_ipmstscdDetType_tags_7[] = {
-	(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 	(ASN_TAG_CLASS_UNIVERSAL | (10 << 2))
 };
 static /* Use -fall-defs-global to expose */
@@ -170,19 +167,19 @@ asn_TYPE_descriptor_t asn_DEF_ipmstscdDetType_7 = {
 	0,	/* Use generic outmost tag fetcher */
 	asn_DEF_ipmstscdDetType_tags_7,
 	sizeof(asn_DEF_ipmstscdDetType_tags_7)
-		/sizeof(asn_DEF_ipmstscdDetType_tags_7[0]) - 1, /* 1 */
+		/sizeof(asn_DEF_ipmstscdDetType_tags_7[0]), /* 1 */
 	asn_DEF_ipmstscdDetType_tags_7,	/* Same as above */
 	sizeof(asn_DEF_ipmstscdDetType_tags_7)
-		/sizeof(asn_DEF_ipmstscdDetType_tags_7[0]), /* 2 */
+		/sizeof(asn_DEF_ipmstscdDetType_tags_7[0]), /* 1 */
 	0,	/* No PER visible constraints */
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_ipmstscdDetType_specs_7	/* Additional specs */
 };
 
-static asn_TYPE_member_t asn_MBR_ipmstscdDetInformation_12[] = {
+static asn_TYPE_member_t asn_MBR_ipmstscdDetInformation_11[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct ipmstscdDetInformation, choice.loopTypeDetInf),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_IpmstscdLoopTypeDetectorInformation,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -191,7 +188,7 @@ static asn_TYPE_member_t asn_MBR_ipmstscdDetInformation_12[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ipmstscdDetInformation, choice.imageTypeDetInf),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_IpmstscdImageTypeDetectorInformation,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -200,7 +197,7 @@ static asn_TYPE_member_t asn_MBR_ipmstscdDetInformation_12[] = {
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct ipmstscdDetInformation, choice.idTypeDetInfo),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_IpmstscdIDTypeDetectorInformation,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -208,23 +205,23 @@ static asn_TYPE_member_t asn_MBR_ipmstscdDetInformation_12[] = {
 		"idTypeDetInfo"
 		},
 };
-static const asn_TYPE_tag2member_t asn_MAP_ipmstscdDetInformation_tag2el_12[] = {
+static const asn_TYPE_tag2member_t asn_MAP_ipmstscdDetInformation_tag2el_11[] = {
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 0, 0, 0 }, /* loopTypeDetInf */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 1, 0, 0 }, /* imageTypeDetInf */
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* idTypeDetInfo */
 };
-static asn_CHOICE_specifics_t asn_SPC_ipmstscdDetInformation_specs_12 = {
+static asn_CHOICE_specifics_t asn_SPC_ipmstscdDetInformation_specs_11 = {
 	sizeof(struct ipmstscdDetInformation),
 	offsetof(struct ipmstscdDetInformation, _asn_ctx),
 	offsetof(struct ipmstscdDetInformation, present),
 	sizeof(((struct ipmstscdDetInformation *)0)->present),
-	asn_MAP_ipmstscdDetInformation_tag2el_12,
+	asn_MAP_ipmstscdDetInformation_tag2el_11,
 	3,	/* Count of tags in the map */
 	0,
 	-1	/* Extensions start */
 };
 static /* Use -fall-defs-global to expose */
-asn_TYPE_descriptor_t asn_DEF_ipmstscdDetInformation_12 = {
+asn_TYPE_descriptor_t asn_DEF_ipmstscdDetInformation_11 = {
 	"ipmstscdDetInformation",
 	"ipmstscdDetInformation",
 	CHOICE_free,
@@ -241,15 +238,15 @@ asn_TYPE_descriptor_t asn_DEF_ipmstscdDetInformation_12 = {
 	0,	/* No tags (pointer) */
 	0,	/* No tags (count) */
 	0,	/* No PER visible constraints */
-	asn_MBR_ipmstscdDetInformation_12,
+	asn_MBR_ipmstscdDetInformation_11,
 	3,	/* Elements count */
-	&asn_SPC_ipmstscdDetInformation_specs_12	/* Additional specs */
+	&asn_SPC_ipmstscdDetInformation_specs_11	/* Additional specs */
 };
 
 static asn_TYPE_member_t asn_MBR_Member_5[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct Member, ipmstscdDetID),
-		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
+		0,
 		&asn_DEF_NativeInteger,
 		memb_ipmstscdDetID_constraint_5,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -257,8 +254,8 @@ static asn_TYPE_member_t asn_MBR_Member_5[] = {
 		"ipmstscdDetID"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct Member, ipmstscdDetType),
-		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
+		0,
 		&asn_DEF_ipmstscdDetType_7,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -266,17 +263,17 @@ static asn_TYPE_member_t asn_MBR_Member_5[] = {
 		"ipmstscdDetType"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct Member, ipmstscdDetInformation),
-		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
-		+1,	/* EXPLICIT tag at current level */
-		&asn_DEF_ipmstscdDetInformation_12,
+		-1 /* Ambiguous tag (CHOICE?) */,
+		0,
+		&asn_DEF_ipmstscdDetInformation_11,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
 		"ipmstscdDetInformation"
 		},
 	{ ATF_POINTER, 1, offsetof(struct Member, detector_time_location),
-		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
+		0,
 		&asn_DEF_GeneralTimeLocationCore,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -288,16 +285,18 @@ static const ber_tlv_tag_t asn_DEF_Member_tags_5[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_Member_tag2el_5[] = {
-    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* ipmstscdDetID */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* ipmstscdDetType */
-    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 }, /* ipmstscdDetInformation */
-    { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 } /* detector-time-location */
+    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 0 }, /* ipmstscdDetID */
+    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 1, 0, 0 }, /* ipmstscdDetType */
+    { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 3, 0, 0 }, /* detector-time-location */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 2, 0, 0 }, /* loopTypeDetInf */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 }, /* imageTypeDetInf */
+    { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 2, 0, 0 } /* idTypeDetInfo */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_Member_specs_5 = {
 	sizeof(struct Member),
 	offsetof(struct Member, _asn_ctx),
 	asn_MAP_Member_tag2el_5,
-	4,	/* Count of tags in the map */
+	6,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* Start extensions */
 	-1	/* Stop extensions */
@@ -339,7 +338,6 @@ static asn_TYPE_member_t asn_MBR_ipmstscdDetData_4[] = {
 		},
 };
 static const ber_tlv_tag_t asn_DEF_ipmstscdDetData_tags_4[] = {
-	(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static asn_SET_OF_specifics_t asn_SPC_ipmstscdDetData_specs_4 = {
@@ -362,10 +360,10 @@ asn_TYPE_descriptor_t asn_DEF_ipmstscdDetData_4 = {
 	0,	/* Use generic outmost tag fetcher */
 	asn_DEF_ipmstscdDetData_tags_4,
 	sizeof(asn_DEF_ipmstscdDetData_tags_4)
-		/sizeof(asn_DEF_ipmstscdDetData_tags_4[0]) - 1, /* 1 */
+		/sizeof(asn_DEF_ipmstscdDetData_tags_4[0]), /* 1 */
 	asn_DEF_ipmstscdDetData_tags_4,	/* Same as above */
 	sizeof(asn_DEF_ipmstscdDetData_tags_4)
-		/sizeof(asn_DEF_ipmstscdDetData_tags_4[0]), /* 2 */
+		/sizeof(asn_DEF_ipmstscdDetData_tags_4[0]), /* 1 */
 	0,	/* No PER visible constraints */
 	asn_MBR_ipmstscdDetData_4,
 	1,	/* Single element */
@@ -375,7 +373,7 @@ asn_TYPE_descriptor_t asn_DEF_ipmstscdDetData_4 = {
 static asn_TYPE_member_t asn_MBR_IPMSTSCD_Data_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct IPMSTSCD_Data, detectorController_index),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_detectorController_index_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -384,7 +382,7 @@ static asn_TYPE_member_t asn_MBR_IPMSTSCD_Data_1[] = {
 		},
 	{ ATF_POINTER, 2, offsetof(struct IPMSTSCD_Data, detectorController_Time_Location),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_GeneralTimeLocationCore,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -392,7 +390,7 @@ static asn_TYPE_member_t asn_MBR_IPMSTSCD_Data_1[] = {
 		"detectorController-Time-Location"
 		},
 	{ ATF_POINTER, 1, offsetof(struct IPMSTSCD_Data, ipmstscdDetData),
-		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
+		(ASN_TAG_CLASS_UNIVERSAL | (16 << 2)),
 		0,
 		&asn_DEF_ipmstscdDetData_4,
 		0,	/* Defer constraints checking to the member type */
@@ -405,9 +403,9 @@ static const ber_tlv_tag_t asn_DEF_IPMSTSCD_Data_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_IPMSTSCD_Data_tag2el_1[] = {
+    { (ASN_TAG_CLASS_UNIVERSAL | (16 << 2)), 2, 0, 0 }, /* ipmstscdDetData */
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* detectorController-index */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* detectorController-Time-Location */
-    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* ipmstscdDetData */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* detectorController-Time-Location */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_IPMSTSCD_Data_specs_1 = {
 	sizeof(struct IPMSTSCD_Data),

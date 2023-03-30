@@ -84,7 +84,7 @@ memb_otdv_LocationElevation_constraint_1(asn_TYPE_descriptor_t *td, const void *
 static asn_TYPE_member_t asn_MBR_GeneralTimeLocationCore_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct GeneralTimeLocationCore, otdv_CurrentTime),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_Time,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -93,7 +93,7 @@ static asn_TYPE_member_t asn_MBR_GeneralTimeLocationCore_1[] = {
 		},
 	{ ATF_POINTER, 3, offsetof(struct GeneralTimeLocationCore, otdv_LocationLongitude),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_otdv_LocationLongitude_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -102,7 +102,7 @@ static asn_TYPE_member_t asn_MBR_GeneralTimeLocationCore_1[] = {
 		},
 	{ ATF_POINTER, 2, offsetof(struct GeneralTimeLocationCore, otdv_LocationLatitude),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_otdv_LocationLatitude_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */
@@ -111,7 +111,7 @@ static asn_TYPE_member_t asn_MBR_GeneralTimeLocationCore_1[] = {
 		},
 	{ ATF_POINTER, 1, offsetof(struct GeneralTimeLocationCore, otdv_LocationElevation),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		+1,	/* EXPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
 		memb_otdv_LocationElevation_constraint_1,
 		0,	/* PER is not compiled, use -gen-PER */

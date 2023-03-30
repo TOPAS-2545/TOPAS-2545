@@ -8,8 +8,8 @@
 
 static asn_TYPE_member_t asn_MBR_IpmstscdOccNoccHistory_1[] = {
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdOccNoccHistory, occupancyTimes),
-		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
+		0,
 		&asn_DEF_NativeInteger,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -17,8 +17,8 @@ static asn_TYPE_member_t asn_MBR_IpmstscdOccNoccHistory_1[] = {
 		"occupancyTimes"
 		},
 	{ ATF_NOFLAGS, 0, offsetof(struct IpmstscdOccNoccHistory, nonOccupancyTimes),
-		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
-		-1,	/* IMPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (2 << 2)),
+		0,
 		&asn_DEF_NativeInteger,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -30,8 +30,8 @@ static const ber_tlv_tag_t asn_DEF_IpmstscdOccNoccHistory_tags_1[] = {
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_IpmstscdOccNoccHistory_tag2el_1[] = {
-    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* occupancyTimes */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* nonOccupancyTimes */
+    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 0, 0, 1 }, /* occupancyTimes */
+    { (ASN_TAG_CLASS_UNIVERSAL | (2 << 2)), 1, -1, 0 } /* nonOccupancyTimes */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_IpmstscdOccNoccHistory_specs_1 = {
 	sizeof(struct IpmstscdOccNoccHistory),

@@ -2,6 +2,12 @@
 
 This repo contains the example implememtations for the "Intelligent Transport Systems — Interface Protocol and Message Set Definition between Traffic Signal Controllers and Detectors" (ISO10711). 
 
+## TODO
+
+* [ ] Move golang deps under the TOPAS repo
+* [ ] Add description of how the golang system works
+* [ ] Add test
+
 # Description
 
 The example contains a C, golang and python implementation of the ISO10711. It does not contain the actual ISO10711 ASN as this is not currently distrobutable. 
