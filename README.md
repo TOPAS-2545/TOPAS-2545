@@ -4,9 +4,11 @@ This repo contains the example implememtations for the "Intelligent Transport Sy
 
 ## TODO
 
-* [ ] Move golang deps under the TOPAS repo
+* [x] Move golang deps under the TOPAS repo
 * [ ] Add description of how the golang system works
-* [ ] Add test
+* [x] Add test framework
+* [ ] Add Licence
+* [ ] Add Docker version for easier testing
 
 # Description
 
@@ -20,11 +22,27 @@ It uses the following tools
 
 * Python3
 * asn1c (https://github.com/vlm/asn1c)
+* A copy of the ISO1711.asn and ISO14927-1.asn ASN1 Files. 
 
+# Running
+
+It is possible to test the build and run stages without the ASN1 files, to do this type:
+
+    make build_all run_all
+    
+This will convert the source files into binary files that are then run. 
+
+If the ASN1 is available, the additional generation and testing stages can be used:
+
+    make generate_all build_all run_all test_all
+    
+This will re-generate the source code from the ASN1 and then builds it, runs and test the results.
+
+# Description
 
 ## Python example
 
-The Python example uses the asn1tools to perform the conversions.
+The Python example uses the asn1tools to perform the conversions. This is mainly used for the testing framework.
 
 ## C example
 
@@ -32,9 +50,5 @@ The C example uses asn1c (https://github.com/vlm/asn1c).
 
 ## golang
 
-The system asn1 package within GOLANG has the following issues
+The golang system uses a third-party systems to convert the ASN1 into golang structures. It also uses a forked version of the encoders/asn1 system package because it does not support REAL types.  
 
-1. Does not easily support CHOICE
-2. Does not support REAL types. 
-
-  

@@ -62,7 +62,7 @@ func main() {
                 Detector_time_location IPMTSCD.GeneralTimeLocationCore "asn1:\"optional\""
             }{
                 {        
-                    IpmstscdDetID: 22,
+                    IpmstscdDetID: 0,
                     IpmstscdDetType: 0,
                     IpmstscdDetInformation: ber.RawValue{ber.ClassContextSpecific, 1, true, ipmstscdDetInformation.Bytes, []byte{}},
                 },

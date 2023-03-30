@@ -1,7 +1,10 @@
 
 # rule to convert the asn1 to Go code
-build: ISO10711-OneModule.asn
+generate: ISO10711-OneModule.asn
 	cd asn1go/cmd/asn1go && go run main.go ../../../ISO10711-OneModule.asn ../../../ipmtscd/IPMTSCD.go
+
+# rule to convert the asn1 to Go code
+build: ISO10711-OneModule.asn
 	go build
 
 # rule to run the encode and decode

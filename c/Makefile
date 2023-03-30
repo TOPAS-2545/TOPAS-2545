@@ -104,7 +104,7 @@ OBJS=${ASN_MODULE_SOURCES:.c=.o} ${ASN_CONVERTER_SOURCES:.c=.o}
 
 LIBS=-lm
 
-all: $(TARGET)
+build: $(TARGET)
 
 $(TARGET): ${OBJS}
 	$(CC) $(CFLAGS) -o $(TARGET) ${OBJS} $(LDFLAGS) $(LIBS)
@@ -119,7 +119,7 @@ clean:
 	rm -f $(TARGET)
 	rm -f $(OBJS)
 
-regen: regenerate-from-asn1-source
+generate: regenerate-from-asn1-source
 
 regenerate-from-asn1-source:
 	asn1c ${ASNFILES}

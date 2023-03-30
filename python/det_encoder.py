@@ -40,3 +40,12 @@ with open("../python-detector.ber", "wb") as newfile:
 
 
 
+res = xml_decoder.encode("IPMSTSCD-Data", decodedMessage)
+
+print(res)
+
+with open("../python-detector.xer", "wb") as newfile:
+    newfile.write(bytearray(res))
+    
+    
+    
