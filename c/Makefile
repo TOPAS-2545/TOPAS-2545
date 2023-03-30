@@ -122,6 +122,6 @@ clean:
 generate: regenerate-from-asn1-source
 
 regenerate-from-asn1-source:
-	asn1c ${ASNFILES}
+	asn1c $(addprefix ../, ${ASNFILES}) 
 	
 

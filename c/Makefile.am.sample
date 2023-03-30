@@ -122,5 +122,5 @@ clean:
 regen: regenerate-from-asn1-source
 
 regenerate-from-asn1-source:
-	asn1c ISO10711.asn ISO14927-1.asn
+	asn1c ../ISO10711.asn ../ISO14927-1.asn
 

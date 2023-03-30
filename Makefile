@@ -36,7 +36,6 @@ test_all:
 
 # Rule to generate the C code from ASN1
 generate_c:
-	@cp --preserve=timestamps ${ASNFILES} c
 	@${MAKE} -C c generate
 
 # Rule to generate the GO code from ASN1
@@ -53,7 +52,6 @@ build_go:
 
 # Run the Python version
 run_python:
-	@cp --preserve=timestamps ${ASNFILES} python
 	@${MAKE} -C python
 
 # Run the C version
@@ -61,7 +59,7 @@ run_c:
 	# check that we can parse the ber formated data into XML
 	@c/converter-sample -iber -oxer python-detector.ber > c-detector.xer
 	# we then recode it as DER (DER is a subset of BER so are compatable)
-	@c/converter-sample -ixer -oder python-detector.xer > c-detector.ber
+	@c/converter-sample -ixer -oder c-detector.xer > c-detector.ber
 
 run_go:
 	@${MAKE} -C golang run
@@ -69,7 +67,6 @@ run_go:
 
 # rule to use the python version to test the c and golang versions
 test_python:
-	@cp --preserve=timestamps ${ASNFILES} python
 	@${MAKE} -C python test
 
 	
