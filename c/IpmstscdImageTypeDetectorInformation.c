@@ -88,7 +88,6 @@ static const asn_INTEGER_enum_map_t asn_MAP_imgErrorState_value2enum_8[] = {
 	{ 5,	16,	"parameterInvalid" },
 	{ 6,	11,	"volumeError" },
 	{ 7,	16,	"managementNeeded" }
-	/* This list is extensible */
 };
 static const unsigned int asn_MAP_imgErrorState_enum2value_8[] = {
 	2,	/* connectionFail(3) */
@@ -98,13 +97,12 @@ static const unsigned int asn_MAP_imgErrorState_enum2value_8[] = {
 	4,	/* parameterInvalid(5) */
 	1,	/* unstableUtility(2) */
 	5	/* volumeError(6) */
-	/* This list is extensible */
 };
 static const asn_INTEGER_specifics_t asn_SPC_imgErrorState_specs_8 = {
 	asn_MAP_imgErrorState_value2enum_8,	/* "tag" => N; sorted by tag */
 	asn_MAP_imgErrorState_enum2value_8,	/* N => "tag"; sorted by N */
 	7,	/* Number of elements in the maps */
-	8,	/* Extensions before this member */
+	0,	/* Enumeration is not extensible */
 	1,	/* Strict enumeration */
 	0,	/* Native long size */
 	0

@@ -10,7 +10,7 @@
                     <loopOccupancyStateDuration>33</loopOccupancyStateDuration>
                     <loopOccupancyPreviousStateDuration>33</loopOccupancyPreviousStateDuration>
                     <loopOccupancyRate>55.799999999999997</loopOccupancyRate>
-                    <loopVolume>69</loopVolume>
+                    <loopVolume>70</loopVolume>
                 </loopTypeDetInf>
             </ipmstscdDetInformation>
         </SEQUENCE>

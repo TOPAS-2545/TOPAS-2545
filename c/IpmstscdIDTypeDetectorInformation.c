@@ -81,7 +81,7 @@ idDeviceType_3_encode_xer(asn_TYPE_descriptor_t *td, void *structure,
 }
 
 static int
-idErrorState_19_constraint(asn_TYPE_descriptor_t *td, const void *sptr,
+idErrorState_18_constraint(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	/* Replace with underlying type checker */
 	td->check_constraints = asn_DEF_NativeEnumerated.check_constraints;
@@ -93,7 +93,7 @@ idErrorState_19_constraint(asn_TYPE_descriptor_t *td, const void *sptr,
  * so here we adjust the DEF accordingly.
  */
 static void
-idErrorState_19_inherit_TYPE_descriptor(asn_TYPE_descriptor_t *td) {
+idErrorState_18_inherit_TYPE_descriptor(asn_TYPE_descriptor_t *td) {
 	td->free_struct    = asn_DEF_NativeEnumerated.free_struct;
 	td->print_struct   = asn_DEF_NativeEnumerated.print_struct;
 	td->check_constraints = asn_DEF_NativeEnumerated.check_constraints;
@@ -111,46 +111,46 @@ idErrorState_19_inherit_TYPE_descriptor(asn_TYPE_descriptor_t *td) {
 }
 
 static void
-idErrorState_19_free(asn_TYPE_descriptor_t *td,
+idErrorState_18_free(asn_TYPE_descriptor_t *td,
 		void *struct_ptr, int contents_only) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	td->free_struct(td, struct_ptr, contents_only);
 }
 
 static int
-idErrorState_19_print(asn_TYPE_descriptor_t *td, const void *struct_ptr,
+idErrorState_18_print(asn_TYPE_descriptor_t *td, const void *struct_ptr,
 		int ilevel, asn_app_consume_bytes_f *cb, void *app_key) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	return td->print_struct(td, struct_ptr, ilevel, cb, app_key);
 }
 
 static asn_dec_rval_t
-idErrorState_19_decode_ber(asn_codec_ctx_t *opt_codec_ctx, asn_TYPE_descriptor_t *td,
+idErrorState_18_decode_ber(asn_codec_ctx_t *opt_codec_ctx, asn_TYPE_descriptor_t *td,
 		void **structure, const void *bufptr, size_t size, int tag_mode) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	return td->ber_decoder(opt_codec_ctx, td, structure, bufptr, size, tag_mode);
 }
 
 static asn_enc_rval_t
-idErrorState_19_encode_der(asn_TYPE_descriptor_t *td,
+idErrorState_18_encode_der(asn_TYPE_descriptor_t *td,
 		void *structure, int tag_mode, ber_tlv_tag_t tag,
 		asn_app_consume_bytes_f *cb, void *app_key) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	return td->der_encoder(td, structure, tag_mode, tag, cb, app_key);
 }
 
 static asn_dec_rval_t
-idErrorState_19_decode_xer(asn_codec_ctx_t *opt_codec_ctx, asn_TYPE_descriptor_t *td,
+idErrorState_18_decode_xer(asn_codec_ctx_t *opt_codec_ctx, asn_TYPE_descriptor_t *td,
 		void **structure, const char *opt_mname, const void *bufptr, size_t size) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	return td->xer_decoder(opt_codec_ctx, td, structure, opt_mname, bufptr, size);
 }
 
 static asn_enc_rval_t
-idErrorState_19_encode_xer(asn_TYPE_descriptor_t *td, void *structure,
+idErrorState_18_encode_xer(asn_TYPE_descriptor_t *td, void *structure,
 		int ilevel, enum xer_encoder_flags_e flags,
 		asn_app_consume_bytes_f *cb, void *app_key) {
-	idErrorState_19_inherit_TYPE_descriptor(td);
+	idErrorState_18_inherit_TYPE_descriptor(td);
 	return td->xer_encoder(td, structure, ilevel, flags, cb, app_key);
 }
 
@@ -237,7 +237,6 @@ static const asn_INTEGER_enum_map_t asn_MAP_idDeviceType_value2enum_3[] = {
 	{ 4,	14,	"barCodeScanner" },
 	{ 5,	10,	"tagScanner" },
 	{ 6,	5,	"other" }
-	/* This list is extensible */
 };
 static const unsigned int asn_MAP_idDeviceType_enum2value_3[] = {
 	4,	/* barCodeScanner(4) */
@@ -247,13 +246,12 @@ static const unsigned int asn_MAP_idDeviceType_enum2value_3[] = {
 	1,	/* radio-Frequency(1) */
 	5,	/* tagScanner(5) */
 	2	/* vdss(2) */
-	/* This list is extensible */
 };
 static const asn_INTEGER_specifics_t asn_SPC_idDeviceType_specs_3 = {
 	asn_MAP_idDeviceType_value2enum_3,	/* "tag" => N; sorted by tag */
 	asn_MAP_idDeviceType_enum2value_3,	/* N => "tag"; sorted by N */
 	7,	/* Number of elements in the maps */
-	8,	/* Extensions before this member */
+	0,	/* Enumeration is not extensible */
 	1,	/* Strict enumeration */
 	0,	/* Native long size */
 	0
@@ -286,55 +284,55 @@ asn_TYPE_descriptor_t asn_DEF_idDeviceType_3 = {
 	&asn_SPC_idDeviceType_specs_3	/* Additional specs */
 };
 
-static const asn_INTEGER_enum_map_t asn_MAP_idErrorState_value2enum_19[] = {
+static const asn_INTEGER_enum_map_t asn_MAP_idErrorState_value2enum_18[] = {
 	{ 1,	7,	"rseFail" },
 	{ 2,	18,	"rse-ConnectionFail" },
 	{ 3,	12,	"wirelessFail" },
 	{ 4,	15,	"unstableUtility" },
 	{ 5,	16,	"managementNeeded" }
 };
-static const unsigned int asn_MAP_idErrorState_enum2value_19[] = {
+static const unsigned int asn_MAP_idErrorState_enum2value_18[] = {
 	4,	/* managementNeeded(5) */
 	1,	/* rse-ConnectionFail(2) */
 	0,	/* rseFail(1) */
 	3,	/* unstableUtility(4) */
 	2	/* wirelessFail(3) */
 };
-static const asn_INTEGER_specifics_t asn_SPC_idErrorState_specs_19 = {
-	asn_MAP_idErrorState_value2enum_19,	/* "tag" => N; sorted by tag */
-	asn_MAP_idErrorState_enum2value_19,	/* N => "tag"; sorted by N */
+static const asn_INTEGER_specifics_t asn_SPC_idErrorState_specs_18 = {
+	asn_MAP_idErrorState_value2enum_18,	/* "tag" => N; sorted by tag */
+	asn_MAP_idErrorState_enum2value_18,	/* N => "tag"; sorted by N */
 	5,	/* Number of elements in the maps */
 	0,	/* Enumeration is not extensible */
 	1,	/* Strict enumeration */
 	0,	/* Native long size */
 	0
 };
-static const ber_tlv_tag_t asn_DEF_idErrorState_tags_19[] = {
+static const ber_tlv_tag_t asn_DEF_idErrorState_tags_18[] = {
 	(ASN_TAG_CLASS_CONTEXT | (9 << 2)),
 	(ASN_TAG_CLASS_UNIVERSAL | (10 << 2))
 };
 static /* Use -fall-defs-global to expose */
-asn_TYPE_descriptor_t asn_DEF_idErrorState_19 = {
+asn_TYPE_descriptor_t asn_DEF_idErrorState_18 = {
 	"idErrorState",
 	"idErrorState",
-	idErrorState_19_free,
-	idErrorState_19_print,
-	idErrorState_19_constraint,
-	idErrorState_19_decode_ber,
-	idErrorState_19_encode_der,
-	idErrorState_19_decode_xer,
-	idErrorState_19_encode_xer,
+	idErrorState_18_free,
+	idErrorState_18_print,
+	idErrorState_18_constraint,
+	idErrorState_18_decode_ber,
+	idErrorState_18_encode_der,
+	idErrorState_18_decode_xer,
+	idErrorState_18_encode_xer,
 	0, 0,	/* No PER support, use "-gen-PER" to enable */
 	0,	/* Use generic outmost tag fetcher */
-	asn_DEF_idErrorState_tags_19,
-	sizeof(asn_DEF_idErrorState_tags_19)
-		/sizeof(asn_DEF_idErrorState_tags_19[0]) - 1, /* 1 */
-	asn_DEF_idErrorState_tags_19,	/* Same as above */
-	sizeof(asn_DEF_idErrorState_tags_19)
-		/sizeof(asn_DEF_idErrorState_tags_19[0]), /* 2 */
+	asn_DEF_idErrorState_tags_18,
+	sizeof(asn_DEF_idErrorState_tags_18)
+		/sizeof(asn_DEF_idErrorState_tags_18[0]) - 1, /* 1 */
+	asn_DEF_idErrorState_tags_18,	/* Same as above */
+	sizeof(asn_DEF_idErrorState_tags_18)
+		/sizeof(asn_DEF_idErrorState_tags_18[0]), /* 2 */
 	0,	/* No PER visible constraints */
 	0, 0,	/* Defined elsewhere */
-	&asn_SPC_idErrorState_specs_19	/* Additional specs */
+	&asn_SPC_idErrorState_specs_18	/* Additional specs */
 };
 
 static asn_TYPE_member_t asn_MBR_IpmstscdIDTypeDetectorInformation_1[] = {
@@ -422,7 +420,7 @@ static asn_TYPE_member_t asn_MBR_IpmstscdIDTypeDetectorInformation_1[] = {
 	{ ATF_POINTER, 3, offsetof(struct IpmstscdIDTypeDetectorInformation, idErrorState),
 		(ASN_TAG_CLASS_CONTEXT | (9 << 2)),
 		-1,	/* IMPLICIT tag at current level */
-		&asn_DEF_idErrorState_19,
+		&asn_DEF_idErrorState_18,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
 		0,

@@ -30,9 +30,6 @@ typedef enum idDeviceType {
 	idDeviceType_barCodeScanner	= 4,
 	idDeviceType_tagScanner	= 5,
 	idDeviceType_other	= 6
-	/*
-	 * Enumeration is extensible
-	 */
 } e_idDeviceType;
 typedef enum idErrorState {
 	idErrorState_rseFail	= 1,
@@ -63,7 +60,7 @@ typedef struct IpmstscdIDTypeDetectorInformation {
 
 /* Implementation */
 /* extern asn_TYPE_descriptor_t asn_DEF_idDeviceType_3;	// (Use -fall-defs-global to expose) */
-/* extern asn_TYPE_descriptor_t asn_DEF_idErrorState_19;	// (Use -fall-defs-global to expose) */
+/* extern asn_TYPE_descriptor_t asn_DEF_idErrorState_18;	// (Use -fall-defs-global to expose) */
 extern asn_TYPE_descriptor_t asn_DEF_IpmstscdIDTypeDetectorInformation;
 
 #ifdef __cplusplus

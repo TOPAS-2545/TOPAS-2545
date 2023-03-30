@@ -30,9 +30,6 @@ typedef enum imgErrorState {
 	imgErrorState_parameterInvalid	= 5,
 	imgErrorState_volumeError	= 6,
 	imgErrorState_managementNeeded	= 7
-	/*
-	 * Enumeration is extensible
-	 */
 } e_imgErrorState;
 
 /* Forward declarations */
