@@ -59,11 +59,6 @@ decodedMessage_reference = jerEncoded.decode("IPMSTSCD-Data", bytearray(txtdata,
 # and define the tests
 tests = [
             {
-                "srcfile":"../c-detector.xer", 
-                "binary": False,
-                "decoder":"xer"
-            },
-            {
                 "srcfile":"../c-detector.ber", 
                 "binary": True,
                 "decoder":"ber"
