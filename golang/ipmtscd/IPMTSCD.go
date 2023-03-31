@@ -3,18 +3,17 @@ package IPMTSCD
 import "github.com/TOPAS-2545/ber"
 
 type Time struct {
-	Time_Year_qty		int64	`asn1:"optional"`
-	Time_Month_qty		int64	`asn1:"optional"`
-	Time_Day_qty		int64	`asn1:"optional"`
-	Time_Hour_qty		int64	`asn1:"optional"`
-	Time_Minute_qty		int64	`asn1:"optional"`
-	Time_Second_qty		int64	`asn1:"optional"`
-	Time_SecondFractions	interface {
-	}
-	Time_Timezone	struct {
-		Timezone_Hour_qty	int64	`asn1:"optional"`
-		Time_Minute_qty		int64	`asn1:"optional"`
-	}
+	Time_Year_qty		int64		`asn1:"optional,explicit,tag:0"`
+	Time_Month_qty		int64		`asn1:"optional,explicit,tag:1"`
+	Time_Day_qty		int64		`asn1:"optional,explicit,tag:2"`
+	Time_Hour_qty		int64		`asn1:"optional,explicit,tag:3"`
+	Time_Minute_qty		int64		`asn1:"optional,explicit,tag:4"`
+	Time_Second_qty		int64		`asn1:"optional,explicit,tag:5"`
+	Time_SecondFractions	ber.RawValue	`asn1:"explicit,tag:6"`
+	Time_Timezone		struct {
+		Timezone_Hour_qty	int64	`asn1:"optional,explicit,tag:1"`
+		Time_Minute_qty		int64	`asn1:"optional,explicit,tag:2"`
+	}	`asn1:"explicit,tag:6"`
 }
 type IPMSTSCD_Data struct {
 	DetectorController_index		int64			`asn1:"explicit,tag:0"`
@@ -41,7 +40,7 @@ type IpmstscdLoopTypeDetectorInformation struct {
 	LoopSpeed				float64				`asn1:"optional,explicit,tag:5"`
 	LoopVolume				int64				`asn1:"explicit,tag:6"`
 	LoopOccNoccHistory			[]IpmstscdOccNoccHistory	`asn1:"optional,explicit,tag:7"`
-	LoopErrorState				ber.Enumerated			`asn1:"optional,explicit,tag:8"`
+	LoopErrorState				ber.Enumerated			`asn1:"optional"`
 	LoopUserData				[]byte				`asn1:"optional,explicit,tag:9"`
 	LoopTargetType				int64				`asn1:"optional,explicit,tag:10"`
 	LoopDirectionDiscrimination		bool				`asn1:"optional,explicit,tag:11"`

@@ -285,18 +285,18 @@ asn_TYPE_descriptor_t asn_DEF_idDeviceType_3 = {
 };
 
 static const asn_INTEGER_enum_map_t asn_MAP_idErrorState_value2enum_18[] = {
-	{ 1,	7,	"rseFail" },
-	{ 2,	18,	"rse-ConnectionFail" },
-	{ 3,	12,	"wirelessFail" },
-	{ 4,	15,	"unstableUtility" },
-	{ 5,	16,	"managementNeeded" }
+	{ 1,	9,	"idRseFail" },
+	{ 2,	20,	"idRse-ConnectionFail" },
+	{ 3,	14,	"idWirelessFail" },
+	{ 4,	17,	"idUnstableUtility" },
+	{ 5,	18,	"idManagementNeeded" }
 };
 static const unsigned int asn_MAP_idErrorState_enum2value_18[] = {
-	4,	/* managementNeeded(5) */
-	1,	/* rse-ConnectionFail(2) */
-	0,	/* rseFail(1) */
-	3,	/* unstableUtility(4) */
-	2	/* wirelessFail(3) */
+	4,	/* idManagementNeeded(5) */
+	1,	/* idRse-ConnectionFail(2) */
+	0,	/* idRseFail(1) */
+	3,	/* idUnstableUtility(4) */
+	2	/* idWirelessFail(3) */
 };
 static const asn_INTEGER_specifics_t asn_SPC_idErrorState_specs_18 = {
 	asn_MAP_idErrorState_value2enum_18,	/* "tag" => N; sorted by tag */

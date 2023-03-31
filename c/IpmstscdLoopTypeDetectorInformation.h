@@ -26,13 +26,13 @@ extern "C" {
 
 /* Dependencies */
 typedef enum loopErrorState {
-	loopErrorState_openLoopCircuit	= 1,
-	loopErrorState_shortLoopCircuit	= 2,
-	loopErrorState_occupancyError	= 3,
-	loopErrorState_nonoccupancyError	= 4,
-	loopErrorState_volumeError	= 5,
-	loopErrorState_parameterInvalid	= 6,
-	loopErrorState_managementNeeded	= 7
+	loopErrorState_leOpenLoopCircuit	= 1,
+	loopErrorState_leDhortLoopCircuit	= 2,
+	loopErrorState_leOccupancyError	= 3,
+	loopErrorState_leNonoccupancyError	= 4,
+	loopErrorState_leVolumeError	= 5,
+	loopErrorState_leParameterInvalid	= 6,
+	loopErrorState_leManagementNeeded	= 7
 } e_loopErrorState;
 
 /* Forward declarations */

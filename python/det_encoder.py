@@ -31,8 +31,8 @@ import sys
 print("Loading Compiler...")
 
 
-
-asnlist = sys.argv[1:]
+jsonFile= sys.argv[1]
+asnlist = sys.argv[2:]
 
 print(asnlist)
 
@@ -43,7 +43,7 @@ derEncoder = asn1tools.compile_files(asnlist, 'der')
 berEncoder  = asn1tools.compile_files(asnlist, 'ber')
 
 # get the RAW XML data
-file = open("../detection.json", "r") 
+file = open(jsonFile, "r") 
 
 txtdata = file.read()
 

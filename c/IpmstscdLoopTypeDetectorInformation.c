@@ -201,22 +201,22 @@ asn_TYPE_descriptor_t asn_DEF_loopOccNoccHistory_9 = {
 };
 
 static const asn_INTEGER_enum_map_t asn_MAP_loopErrorState_value2enum_11[] = {
-	{ 1,	15,	"openLoopCircuit" },
-	{ 2,	16,	"shortLoopCircuit" },
-	{ 3,	14,	"occupancyError" },
-	{ 4,	17,	"nonoccupancyError" },
-	{ 5,	11,	"volumeError" },
-	{ 6,	16,	"parameterInvalid" },
-	{ 7,	16,	"managementNeeded" }
+	{ 1,	17,	"leOpenLoopCircuit" },
+	{ 2,	18,	"leDhortLoopCircuit" },
+	{ 3,	16,	"leOccupancyError" },
+	{ 4,	19,	"leNonoccupancyError" },
+	{ 5,	13,	"leVolumeError" },
+	{ 6,	18,	"leParameterInvalid" },
+	{ 7,	18,	"leManagementNeeded" }
 };
 static const unsigned int asn_MAP_loopErrorState_enum2value_11[] = {
-	6,	/* managementNeeded(7) */
-	3,	/* nonoccupancyError(4) */
-	2,	/* occupancyError(3) */
-	0,	/* openLoopCircuit(1) */
-	5,	/* parameterInvalid(6) */
-	1,	/* shortLoopCircuit(2) */
-	4	/* volumeError(5) */
+	1,	/* leDhortLoopCircuit(2) */
+	6,	/* leManagementNeeded(7) */
+	3,	/* leNonoccupancyError(4) */
+	2,	/* leOccupancyError(3) */
+	0,	/* leOpenLoopCircuit(1) */
+	5,	/* leParameterInvalid(6) */
+	4	/* leVolumeError(5) */
 };
 static const asn_INTEGER_specifics_t asn_SPC_loopErrorState_specs_11 = {
 	asn_MAP_loopErrorState_value2enum_11,	/* "tag" => N; sorted by tag */
@@ -228,7 +228,6 @@ static const asn_INTEGER_specifics_t asn_SPC_loopErrorState_specs_11 = {
 	0
 };
 static const ber_tlv_tag_t asn_DEF_loopErrorState_tags_11[] = {
-	(ASN_TAG_CLASS_CONTEXT | (8 << 2)),
 	(ASN_TAG_CLASS_UNIVERSAL | (10 << 2))
 };
 static /* Use -fall-defs-global to expose */
@@ -246,10 +245,10 @@ asn_TYPE_descriptor_t asn_DEF_loopErrorState_11 = {
 	0,	/* Use generic outmost tag fetcher */
 	asn_DEF_loopErrorState_tags_11,
 	sizeof(asn_DEF_loopErrorState_tags_11)
-		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 2 */
+		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 1 */
 	asn_DEF_loopErrorState_tags_11,	/* Same as above */
 	sizeof(asn_DEF_loopErrorState_tags_11)
-		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 2 */
+		/sizeof(asn_DEF_loopErrorState_tags_11[0]), /* 1 */
 	0,	/* No PER visible constraints */
 	0, 0,	/* Defined elsewhere */
 	&asn_SPC_loopErrorState_specs_11	/* Additional specs */
@@ -329,8 +328,8 @@ static asn_TYPE_member_t asn_MBR_IpmstscdLoopTypeDetectorInformation_1[] = {
 		"loopOccNoccHistory"
 		},
 	{ ATF_POINTER, 4, offsetof(struct IpmstscdLoopTypeDetectorInformation, loopErrorState),
-		(ASN_TAG_CLASS_CONTEXT | (8 << 2)),
-		+1,	/* EXPLICIT tag at current level */
+		(ASN_TAG_CLASS_UNIVERSAL | (10 << 2)),
+		0,
 		&asn_DEF_loopErrorState_11,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
@@ -369,6 +368,7 @@ static const ber_tlv_tag_t asn_DEF_IpmstscdLoopTypeDetectorInformation_tags_1[] 
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
 static const asn_TYPE_tag2member_t asn_MAP_IpmstscdLoopTypeDetectorInformation_tag2el_1[] = {
+    { (ASN_TAG_CLASS_UNIVERSAL | (10 << 2)), 8, 0, 0 }, /* loopErrorState */
     { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* loopDataDuration */
     { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* loopOccupancyState */
     { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 }, /* loopOccupancyStateDuration */
@@ -377,7 +377,6 @@ static const asn_TYPE_tag2member_t asn_MAP_IpmstscdLoopTypeDetectorInformation_t
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 5, 0, 0 }, /* loopSpeed */
     { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 6, 0, 0 }, /* loopVolume */
     { (ASN_TAG_CLASS_CONTEXT | (7 << 2)), 7, 0, 0 }, /* loopOccNoccHistory */
-    { (ASN_TAG_CLASS_CONTEXT | (8 << 2)), 8, 0, 0 }, /* loopErrorState */
     { (ASN_TAG_CLASS_CONTEXT | (9 << 2)), 9, 0, 0 }, /* loopUserData */
     { (ASN_TAG_CLASS_CONTEXT | (10 << 2)), 10, 0, 0 }, /* loopTargetType */
     { (ASN_TAG_CLASS_CONTEXT | (11 << 2)), 11, 0, 0 } /* loopDirectionDiscrimination */

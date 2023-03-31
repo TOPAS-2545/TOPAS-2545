@@ -32,11 +32,11 @@ typedef enum idDeviceType {
 	idDeviceType_other	= 6
 } e_idDeviceType;
 typedef enum idErrorState {
-	idErrorState_rseFail	= 1,
-	idErrorState_rse_ConnectionFail	= 2,
-	idErrorState_wirelessFail	= 3,
-	idErrorState_unstableUtility	= 4,
-	idErrorState_managementNeeded	= 5
+	idErrorState_idRseFail	= 1,
+	idErrorState_idRse_ConnectionFail	= 2,
+	idErrorState_idWirelessFail	= 3,
+	idErrorState_idUnstableUtility	= 4,
+	idErrorState_idManagementNeeded	= 5
 } e_idErrorState;
 
 /* IpmstscdIDTypeDetectorInformation */

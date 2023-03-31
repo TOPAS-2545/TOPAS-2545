@@ -23,7 +23,12 @@
 
 ASNFILES=ISO10711.asn ISO14927-1.asn
 
+
+SRC_JSONFILE=detection.json
+
+
 export ASNFILES
+export SRC_JSONFILE
 
 all: 
 
@@ -58,6 +63,9 @@ test_all:
 	${MAKE} test_python
 
 
+clean_all:
+	${MAKE} -C c clean
+	rm -f c-detector.* python-detector.* golang-detector.*
 
 # Rule to generate the C code from ASN1
 generate_c:
@@ -93,6 +101,8 @@ run_go:
 # rule to use the python version to test the c and golang versions
 test_python:
 	@${MAKE} -C python test
+
+
 
 	
 .PHONY: all run_python run_c run_go

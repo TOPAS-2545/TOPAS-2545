@@ -23,13 +23,13 @@ extern "C" {
 
 /* Dependencies */
 typedef enum imgErrorState {
-	imgErrorState_deviceFail	= 1,
-	imgErrorState_unstableUtility	= 2,
-	imgErrorState_connectionFail	= 3,
-	imgErrorState_imageProcessingFail	= 4,
-	imgErrorState_parameterInvalid	= 5,
-	imgErrorState_volumeError	= 6,
-	imgErrorState_managementNeeded	= 7
+	imgErrorState_imDeviceFail	= 1,
+	imgErrorState_imUnstableUtility	= 2,
+	imgErrorState_imConnectionFail	= 3,
+	imgErrorState_imImageProcessingFail	= 4,
+	imgErrorState_imParameterInvalid	= 5,
+	imgErrorState_imVolumeError	= 6,
+	imgErrorState_imManagementNeeded	= 7
 } e_imgErrorState;
 
 /* Forward declarations */

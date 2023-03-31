@@ -31,7 +31,8 @@ import sys
 
 print("Loading Compiler...")
 
-asnlist = sys.argv[1:]
+jsonFile= sys.argv[1]
+asnlist = sys.argv[2:]
 
 print(asnlist)
 
@@ -47,7 +48,7 @@ def ordered(obj):
 jerEncoded = asn1tools.compile_files(asnlist, 'jer')
 
 # load in the reference file
-file = open("../detection.json", "r") 
+file = open(jsonFile, "r") 
 
 txtdata = file.read()
 

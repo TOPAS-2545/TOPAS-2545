@@ -1,0 +1,57 @@
+{
+    "detectorController-index": 1,
+    
+    "ipmstscdDetData": [{
+        "ipmstscdDetID": 0,
+        "ipmstscdDetType": "loopTypeDetector",
+                
+        "ipmstscdDetInformation": {
+            "loopTypeDetInf": {
+                "loopDataDuration": 55,
+                "loopOccupancyState": true,
+                "loopOccupancyStateDuration": 33,
+                "loopOccupancyPreviousStateDuration": 33,
+                "loopOccupancyRate": 55.8,
+                "loopSpeed": 10.3,
+                "loopVolume": 70,
+                "loopOccNoccHistory": [
+                    {
+                        "occupancyTimes": 2, 
+                        "nonOccupancyTimes": 4 
+                    },
+                    {
+                        "occupancyTimes": 1, 
+                        "nonOccupancyTimes": 5 
+                    }                               
+                ],             
+                "loopTargetType": 3,
+                "loopErrorState": "leManagementNeeded",
+                "loopDirectionDiscrimination": true
+            }   
+        },
+        "detector-time-location": {
+            "otdv-CurrentTime": {
+                "time-Year-qty": 2022,
+                "time-Month-qty": 9,
+                "time-Day-qty": 8,
+                "time-Hour-qty": 8,
+                "time-Minute-qty": 7,
+                "time-Second-qty": 44,
+                "time-SecondFractions": {
+                    "milliseconds": 100
+                },
+                "time-Timezone": {
+                    "timezone-Hour-qty": 0,
+                    "time-Minute-qty": 0
+                }
+            },
+            "otdv-LocationLongitude": 11110,
+            "otdv-LocationLatitude": 50747549,
+            "otdv-LocationElevation": -1992
+            
+        }
+    }]
+}
+
+
+

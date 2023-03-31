@@ -81,22 +81,22 @@ imgErrorState_8_encode_xer(asn_TYPE_descriptor_t *td, void *structure,
 }
 
 static const asn_INTEGER_enum_map_t asn_MAP_imgErrorState_value2enum_8[] = {
-	{ 1,	10,	"deviceFail" },
-	{ 2,	15,	"unstableUtility" },
-	{ 3,	14,	"connectionFail" },
-	{ 4,	19,	"imageProcessingFail" },
-	{ 5,	16,	"parameterInvalid" },
-	{ 6,	11,	"volumeError" },
-	{ 7,	16,	"managementNeeded" }
+	{ 1,	12,	"imDeviceFail" },
+	{ 2,	17,	"imUnstableUtility" },
+	{ 3,	16,	"imConnectionFail" },
+	{ 4,	21,	"imImageProcessingFail" },
+	{ 5,	18,	"imParameterInvalid" },
+	{ 6,	13,	"imVolumeError" },
+	{ 7,	18,	"imManagementNeeded" }
 };
 static const unsigned int asn_MAP_imgErrorState_enum2value_8[] = {
-	2,	/* connectionFail(3) */
-	0,	/* deviceFail(1) */
-	3,	/* imageProcessingFail(4) */
-	6,	/* managementNeeded(7) */
-	4,	/* parameterInvalid(5) */
-	1,	/* unstableUtility(2) */
-	5	/* volumeError(6) */
+	2,	/* imConnectionFail(3) */
+	0,	/* imDeviceFail(1) */
+	3,	/* imImageProcessingFail(4) */
+	6,	/* imManagementNeeded(7) */
+	4,	/* imParameterInvalid(5) */
+	1,	/* imUnstableUtility(2) */
+	5	/* imVolumeError(6) */
 };
 static const asn_INTEGER_specifics_t asn_SPC_imgErrorState_specs_8 = {
 	asn_MAP_imgErrorState_value2enum_8,	/* "tag" => N; sorted by tag */
