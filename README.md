@@ -11,9 +11,6 @@ The purpose of this repository is to store:
 **!!!Note that this repository is under construction and is not yet ready for general use!!!**
 
 
-
-
-
 ## TODO
 
 * [x] Move golang deps under the TOPAS repo
@@ -34,6 +31,8 @@ The example has been designed to run under linux.
 It uses the following tools:
 
 * Python3
+* Golang
+* Make
 * asn1c (https://github.com/vlm/asn1c)
 * A copy of the ISO1711.asn and ISO14927-1.asn ASN1 Files. 
 
@@ -85,5 +84,8 @@ The testing system performs the following steps
 1. The Python test checks that each of the created files matches the original JER version of the message
 
  
-   
+There are two example source files available:
+
+* **detection.json** - A minimal example of a detection event
+* **detection_long.json** - A full example of a detection event
    
