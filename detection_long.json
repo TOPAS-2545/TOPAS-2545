@@ -24,6 +24,7 @@
                         "nonOccupancyTimes": 5 
                     }                               
                 ],             
+                "loopUserData": "01020304",
                 "loopTargetType": 3,
                 "loopErrorState": "leManagementNeeded",
                 "loopDirectionDiscrimination": true
