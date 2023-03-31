@@ -2,6 +2,18 @@
 
 This repo contains the example implementations for the "Intelligent Transport Systems — Interface Protocol and Message Set Definition between Traffic Signal Controllers and Detectors" (ISO10711). 
 
+The purpose of this repository is to store:
+
+* Example code implementations of the TOPAS 2545 profile specification standard
+* Documentation and Detector Profile specifications.
+
+
+**!!!Note that this repository is under construction and is not yet ready for general use!!!**
+
+
+
+
+
 ## TODO
 
 * [x] Move golang deps under the TOPAS repo
