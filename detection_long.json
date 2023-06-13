@@ -26,7 +26,7 @@
                 ],             
                 "loopUserData": "01020304",
                 "loopTargetType": 3,
-                "loopErrorState": "leManagementNeeded",
+                "loopErrorState": "managementNeeded",
                 "loopDirectionDiscrimination": true
             }   
         },
