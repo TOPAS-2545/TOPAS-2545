@@ -52,8 +52,24 @@ file = open(jsonFile, "r")
 
 txtdata = file.read()
 
+#print("Src json: "+str(txtdata))
+
 # decode to internal format
 decodedMessage_reference = jerEncoded.decode("IPMSTSCDData", bytearray(txtdata, encoding='utf8'))
+
+# and re-encode 
+reEncoded = jerEncoded.encode("IPMSTSCDData", decodedMessage_reference).decode("utf-8") 
+                              
+#print("reEncoded json: "+str(reEncoded))
+
+srcJson=json.loads(txtdata)
+reEncodedJson=json.loads(reEncoded)
+
+print("Src json: "+str(srcJson))
+print("reE json: "+str(reEncodedJson))
+
+if srcJson != reEncodedJson:
+    raise Exception("Reference JSON has felds that cannot be parsed by standard") 
 
 #--------------------------------
 # and define the tests
