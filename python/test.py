@@ -53,7 +53,7 @@ file = open(jsonFile, "r")
 txtdata = file.read()
 
 # decode to internal format
-decodedMessage_reference = jerEncoded.decode("IPMSTSCD-Data", bytearray(txtdata, encoding='utf8'))
+decodedMessage_reference = jerEncoded.decode("IPMSTSCDData", bytearray(txtdata, encoding='utf8'))
 
 #--------------------------------
 # and define the tests
@@ -93,7 +93,7 @@ for curTest in tests:
         txtdata=bytearray(txtdata, encoding='utf8') 
     
     # decode to internal format
-    decodedMessage_c = decoder.decode("IPMSTSCD-Data", txtdata)
+    decodedMessage_c = decoder.decode("IPMSTSCDData", txtdata)
     
     print(str(decodedMessage_c))
     

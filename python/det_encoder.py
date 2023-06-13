@@ -48,11 +48,11 @@ file = open(jsonFile, "r")
 txtdata = file.read()
 
 # decode to internal format
-decodedMessage = jerEncoded.decode("IPMSTSCD-Data", bytearray(txtdata, encoding='utf8'))
+decodedMessage = jerEncoded.decode("IPMSTSCDData", bytearray(txtdata, encoding='utf8'))
 
 print(decodedMessage)
 
-res = berEncoder.encode("IPMSTSCD-Data", decodedMessage)
+res = berEncoder.encode("IPMSTSCDData", decodedMessage)
 
 print(res)
 
@@ -61,7 +61,7 @@ with open("../python-detector.ber", "wb") as newfile:
 
 
 
-res = xml_decoder.encode("IPMSTSCD-Data", decodedMessage)
+res = xml_decoder.encode("IPMSTSCDData", decodedMessage)
 
 print(res)
 
@@ -69,7 +69,7 @@ with open("../python-detector.xer", "wb") as newfile:
     newfile.write(bytearray(res))
     
 
-res = derEncoder.encode("IPMSTSCD-Data", decodedMessage)
+res = derEncoder.encode("IPMSTSCDData", decodedMessage)
 
 print(res)
 
