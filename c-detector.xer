@@ -29,6 +29,22 @@
                     <loopDirectionDiscrimination><true/></loopDirectionDiscrimination>
                 </loopTypeDetInf>
             </ipmstscdDetInformation>
+            <detector-Time-Location>
+                <otdv-CurrentTime>
+                    <time-Year-qty>2022</time-Year-qty>
+                    <time-Month-qty>9</time-Month-qty>
+                    <time-Day-qty>8</time-Day-qty>
+                    <time-Hour-qty>8</time-Hour-qty>
+                    <time-Minute-qty>7</time-Minute-qty>
+                    <time-Second-qty>44</time-Second-qty>
+                    <time-SecondFractions>
+                        <milliseconds>100</milliseconds>
+                    </time-SecondFractions>
+                </otdv-CurrentTime>
+                <otdv-LocationLongitude>11110</otdv-LocationLongitude>
+                <otdv-LocationLatitude>50747549</otdv-LocationLatitude>
+                <otdv-LocationElevation>-1992</otdv-LocationElevation>
+            </detector-Time-Location>
         </IpmstscdDetDataSeq>
     </ipmstscdDetData>
 </IPMSTSCDData>
