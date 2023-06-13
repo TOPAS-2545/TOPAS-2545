@@ -1,18 +1,34 @@
-<IPMSTSCD-Data>
+<IPMSTSCDData>
     <detectorController-index>1</detectorController-index>
     <ipmstscdDetData>
-        <SEQUENCE>
+        <IpmstscdDetDataSeq>
             <ipmstscdDetID>0</ipmstscdDetID>
             <ipmstscdDetType><loopTypeDetector/></ipmstscdDetType>
             <ipmstscdDetInformation>
                 <loopTypeDetInf>
+                    <loopDataDuration>55</loopDataDuration>
                     <loopOccupancyState><true/></loopOccupancyState>
                     <loopOccupancyStateDuration>33</loopOccupancyStateDuration>
                     <loopOccupancyPreviousStateDuration>33</loopOccupancyPreviousStateDuration>
                     <loopOccupancyRate>55.799999999999997</loopOccupancyRate>
+                    <loopSpeed>10.300000000000001</loopSpeed>
                     <loopVolume>70</loopVolume>
+                    <loopOccNoccHistory>
+                        <IpmstscdOccNoccHistory>
+                            <occupancyTimes>2</occupancyTimes>
+                            <nonOccupancyTimes>4</nonOccupancyTimes>
+                        </IpmstscdOccNoccHistory>
+                        <IpmstscdOccNoccHistory>
+                            <occupancyTimes>1</occupancyTimes>
+                            <nonOccupancyTimes>5</nonOccupancyTimes>
+                        </IpmstscdOccNoccHistory>
+                    </loopOccNoccHistory>
+                    <loopErrorState><managementNeeded/></loopErrorState>
+                    <loopUserData>01 02 03 04</loopUserData>
+                    <loopTargetType>3</loopTargetType>
+                    <loopDirectionDiscrimination><true/></loopDirectionDiscrimination>
                 </loopTypeDetInf>
             </ipmstscdDetInformation>
-        </SEQUENCE>
+        </IpmstscdDetDataSeq>
     </ipmstscdDetData>
-</IPMSTSCD-Data>
+</IPMSTSCDData>
