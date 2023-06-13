@@ -5,35 +5,35 @@
  * 	`asn1c -fcompound-names`
  */
 
-#ifndef	_IpmstscdOccNoccHistory_H_
-#define	_IpmstscdOccNoccHistory_H_
+#ifndef	_VehicleInfoSeq_H_
+#define	_VehicleInfoSeq_H_
 
 
 #include <asn_application.h>
 
 /* Including external dependencies */
-#include <NativeInteger.h>
+#include <OCTET_STRING.h>
 #include <constr_SEQUENCE.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* IpmstscdOccNoccHistory */
-typedef struct IpmstscdOccNoccHistory {
-	long	 occupancyTimes;
-	long	 nonOccupancyTimes;
+/* VehicleInfoSeq */
+typedef struct VehicleInfoSeq {
+	OCTET_STRING_t	 vehicleID;
+	OCTET_STRING_t	*idData	/* OPTIONAL */;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;
-} IpmstscdOccNoccHistory_t;
+} VehicleInfoSeq_t;
 
 /* Implementation */
-extern asn_TYPE_descriptor_t asn_DEF_IpmstscdOccNoccHistory;
+extern asn_TYPE_descriptor_t asn_DEF_VehicleInfoSeq;
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif	/* _IpmstscdOccNoccHistory_H_ */
+#endif	/* _VehicleInfoSeq_H_ */
 #include <asn_internal.h>

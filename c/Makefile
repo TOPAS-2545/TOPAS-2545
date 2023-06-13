@@ -1,33 +1,37 @@
 ASN_MODULE_SOURCES=	\
-	IPMSTSCD-Data.c	\
+	IPMSTSCDData.c	\
 	GeneralTimeLocationCore.c	\
+	IpmstscdDetDataSeq.c	\
 	IpmstscdLoopTypeDetectorInformation.c	\
-	IpmstscdOccNoccHistory.c	\
-	Det-Accmulated.c	\
-	Det-SerialInfo.c	\
-	Det-Velocity.c	\
-	Det-Info.c	\
 	IpmstscdImageTypeDetectorInformation.c	\
-	CongestionInfo.c	\
-	DirectionDensity.c	\
 	IpmstscdIDTypeDetectorInformation.c	\
-	VehicleInfo.c	\
+	IpmstscdOccNoccHistory.c	\
+	IpmstscdIDTypeDetectorInformationType2.c	\
+	VehicleInfoSeq.c	\
+	IpmstscdImageTypeDetectorInformationType2.c	\
+	DirectionDensitySeq.c	\
+	IpmstscdOccTypeDetectorInformationType2.c	\
+	Det-AccmulatedSeq.c	\
+	Det-SerialInfoSeq.c	\
+	Det-VelocitySeq.c	\
 	Time.c
 
 ASN_MODULE_HEADERS=	\
-	IPMSTSCD-Data.h	\
+	IPMSTSCDData.h	\
 	GeneralTimeLocationCore.h	\
+	IpmstscdDetDataSeq.h	\
 	IpmstscdLoopTypeDetectorInformation.h	\
-	IpmstscdOccNoccHistory.h	\
-	Det-Accmulated.h	\
-	Det-SerialInfo.h	\
-	Det-Velocity.h	\
-	Det-Info.h	\
 	IpmstscdImageTypeDetectorInformation.h	\
-	CongestionInfo.h	\
-	DirectionDensity.h	\
 	IpmstscdIDTypeDetectorInformation.h	\
-	VehicleInfo.h	\
+	IpmstscdOccNoccHistory.h	\
+	IpmstscdIDTypeDetectorInformationType2.h	\
+	VehicleInfoSeq.h	\
+	IpmstscdImageTypeDetectorInformationType2.h	\
+	DirectionDensitySeq.h	\
+	IpmstscdOccTypeDetectorInformationType2.h	\
+	Det-AccmulatedSeq.h	\
+	Det-SerialInfoSeq.h	\
+	Det-VelocitySeq.h	\
 	Time.h
 
 ASN_MODULE_HEADERS+=BOOLEAN.h
@@ -99,7 +103,7 @@ libsomething_la_SOURCES=$(ASN_MODULE_SOURCES) $(ASN_MODULE_HEADERS)
 # This file may be used as an input for make(3)
 # Remove the lines below to convert it into a pure .am file
 TARGET = converter-sample
-CFLAGS += -I. -DPDU=IPMSTSCD_Data
+CFLAGS += -I. -DPDU=IPMSTSCDData
 OBJS=${ASN_MODULE_SOURCES:.c=.o} ${ASN_CONVERTER_SOURCES:.c=.o}
 
 LIBS=-lm
@@ -122,6 +126,6 @@ clean:
 generate: regenerate-from-asn1-source
 
 regenerate-from-asn1-source:
-	asn1c $(addprefix ../, ${ASNFILES}) 
+	asn1c -fcompound-names $(addprefix ../, ${ASNFILES}) 
 	
 
