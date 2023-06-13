@@ -23,7 +23,7 @@
 
 ASNFILES=Annex_A_10711_v2.0.asn ISO14927-1.asn
 
-SRC_JSONFILE=detection.json
+SRC_JSONFILE=detection_long.json
 
 
 export ASNFILES
