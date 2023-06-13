@@ -11,9 +11,9 @@ type Time struct {
 	Time_Second_qty		int64		`asn1:"optional,tag:5"`
 	Time_SecondFractions	ber.RawValue	`asn1:"explicit,tag:6"`
 	Time_Timezone		struct {
-		Timezone_Hour_qty	int64	`asn1:"optional,tag:1"`
-		Time_Minute_qty		int64	`asn1:"optional,tag:2"`
-	}	`asn1:"explicit,tag:6"`
+		Timezone_Hour_qty	int64	`asn1:"optional,tag:0"`
+		Time_Minute_qty		int64	`asn1:"optional,tag:1"`
+	}	`asn1:"optional,explicit,tag:7"`
 }
 type IPMSTSCDData struct {
 	DetectorController_index		int64			`asn1:"tag:0"`

@@ -129,49 +129,53 @@ func main() {
     
         fmt.Printf("IpmstscdDetData: %+v \n",t)
         
-        if t.IpmstscdDetData[0].IpmstscdDetType != 0 {
-            panic("Not correct Detector type")        
+        if len(t.IpmstscdDetData)>0 {
+            
+            
+            if t.IpmstscdDetData[0].IpmstscdDetType != 0 {
+                panic("Not correct Detector type")        
+            }
+            
+            fmt.Printf("IpmstscdDetData[0].IpmstscdDetInformation: %+v \n",t.IpmstscdDetData[0].IpmstscdDetInformation)
+            
+            var loopData IPMTSCD.IpmstscdLoopTypeDetectorInformation 
+            
+            // we know this is a loopTypeDetInf type, so tell the unmarchal that we will
+            // expect a tag=1 (loopTypeDetInf)
+            _, err2 := ber.UnmarshalWithParams(t.IpmstscdDetData[0].IpmstscdDetInformation.Bytes, &loopData, "tag:1")
+            
+            check(err2)
+            
+            fmt.Printf("loopData: %+v \n",loopData)    
+            
+            
+            // now check the fields are correct         
+            if loopData.LoopOccupancyState != true {
+                fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyState not correct\n")
+                os.Exit(1)
+            }
+                     
+            if loopData.LoopOccupancyStateDuration != 33 {
+                fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyStateDuration not correct\n")
+                os.Exit(1)
+            }        
+            
+            
+            //-------------------------------------------
+            
+            
+            // and now re-generate it, we need to add the TAG=1 for the ipmstscdDetInformation
+            // type, so that tag=1 for loopTypeDetInf, tag=2 for imageTypeDetInf and 
+            // tag=3 for idTypeDetInfo        
+            generatedInnerBytes, err3 := ber.MarshalWithParams(loopData, "tag:1")
+        
+            check(err3)
+            
+            // and add it into the header
+            // we need to set the tag to 2 for the ipmstscdDetInformation structure
+            t.IpmstscdDetData[0].IpmstscdDetInformation = ber.RawValue{Class: ber.ClassContextSpecific, Tag: 2, IsCompound: true, Bytes: generatedInnerBytes}
+        
         }
-        
-        fmt.Printf("IpmstscdDetData[0].IpmstscdDetInformation: %+v \n",t.IpmstscdDetData[0].IpmstscdDetInformation)
-        
-        var loopData IPMTSCD.IpmstscdLoopTypeDetectorInformation 
-        
-        // we know this is a loopTypeDetInf type, so tell the unmarchal that we will
-        // expect a tag=1 (loopTypeDetInf)
-        _, err2 := ber.UnmarshalWithParams(t.IpmstscdDetData[0].IpmstscdDetInformation.Bytes, &loopData, "tag:1")
-        
-        check(err2)
-        
-        fmt.Printf("loopData: %+v \n",loopData)    
-        
-        
-        // now check the fields are correct         
-        if loopData.LoopOccupancyState != true {
-            fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyState not correct\n")
-            os.Exit(1)
-        }
-                 
-        if loopData.LoopOccupancyStateDuration != 33 {
-            fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyStateDuration not correct\n")
-            os.Exit(1)
-        }        
-        
-        
-        //-------------------------------------------
-        
-        
-        // and now re-generate it, we need to add the TAG=1 for the ipmstscdDetInformation
-        // type, so that tag=1 for loopTypeDetInf, tag=2 for imageTypeDetInf and 
-        // tag=3 for idTypeDetInfo        
-        generatedInnerBytes, err3 := ber.MarshalWithParams(loopData, "tag:1")
-    
-        check(err3)
-        
-        // and add it into the header
-        // we need to set the tag to 2 for the ipmstscdDetInformation structure
-        t.IpmstscdDetData[0].IpmstscdDetInformation = ber.RawValue{Class: ber.ClassContextSpecific, Tag: 2, IsCompound: true, Bytes: generatedInnerBytes}
-    
     
         // and now generate the whole messgage
         generatedBytes, err := ber.Marshal(t)    

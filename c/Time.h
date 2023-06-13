@@ -59,7 +59,7 @@ typedef struct Time {
 		
 		/* Context for parsing across buffer boundaries */
 		asn_struct_ctx_t _asn_ctx;
-	} time_Timezone;
+	} *time_Timezone;
 	/*
 	 * This type is extensible,
 	 * possible extensions are below.

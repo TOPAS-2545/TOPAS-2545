@@ -30,7 +30,7 @@
                 "loopDirectionDiscrimination": true
             }   
         },
-        "detector-time-location": {
+        "detector-Time-Location": {
             "otdv-CurrentTime": {
                 "time-Year-qty": 2022,
                 "time-Month-qty": 9,
@@ -40,10 +40,6 @@
                 "time-Second-qty": 44,
                 "time-SecondFractions": {
                     "milliseconds": 100
-                },
-                "time-Timezone": {
-                    "timezone-Hour-qty": 0,
-                    "time-Minute-qty": 0
                 }
             },
             "otdv-LocationLongitude": 11110,
