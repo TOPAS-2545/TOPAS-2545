@@ -8,7 +8,7 @@
 #include "Time.h"
 
 static int
-memb_deci_seconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
+memb_time_Deciseconds_qty_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	long value;
 	
@@ -33,7 +33,7 @@ memb_deci_seconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 }
 
 static int
-memb_centi_seconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
+memb_time_Centiseconds_qty_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	long value;
 	
@@ -58,7 +58,7 @@ memb_centi_seconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 }
 
 static int
-memb_milliseconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
+memb_time_Milliseconds_qty_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	long value;
 	
@@ -83,7 +83,7 @@ memb_milliseconds_constraint_8(asn_TYPE_descriptor_t *td, const void *sptr,
 }
 
 static int
-memb_timezone_Hour_qty_constraint_13(asn_TYPE_descriptor_t *td, const void *sptr,
+memb_time_TimeZoneHour_qty_constraint_13(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	long value;
 	
@@ -108,7 +108,7 @@ memb_timezone_Hour_qty_constraint_13(asn_TYPE_descriptor_t *td, const void *sptr
 }
 
 static int
-memb_time_Minute_qty_constraint_13(asn_TYPE_descriptor_t *td, const void *sptr,
+memb_time_TimeZoneMinute_qty_constraint_13(asn_TYPE_descriptor_t *td, const void *sptr,
 			asn_app_constraint_failed_f *ctfailcb, void *app_key) {
 	long value;
 	
@@ -336,54 +336,54 @@ static int asn_DFL_7_set_0(int set_value, void **sptr) {
 		return (*st == 0);
 	}
 }
-static asn_TYPE_member_t asn_MBR_time_SecondFractions_8[] = {
-	{ ATF_NOFLAGS, 0, offsetof(struct Time__time_SecondFractions, choice.deci_seconds),
+static asn_TYPE_member_t asn_MBR_secondFractions_8[] = {
+	{ ATF_NOFLAGS, 0, offsetof(struct Time__secondFractions, choice.time_Deciseconds_qty),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
-		memb_deci_seconds_constraint_8,
+		memb_time_Deciseconds_qty_constraint_8,
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
-		"deci-seconds"
+		"time-Deciseconds-qty"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct Time__time_SecondFractions, choice.centi_seconds),
+	{ ATF_NOFLAGS, 0, offsetof(struct Time__secondFractions, choice.time_Centiseconds_qty),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
-		memb_centi_seconds_constraint_8,
+		memb_time_Centiseconds_qty_constraint_8,
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
-		"centi-seconds"
+		"time-Centiseconds-qty"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct Time__time_SecondFractions, choice.milliseconds),
+	{ ATF_NOFLAGS, 0, offsetof(struct Time__secondFractions, choice.time_Milliseconds_qty),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
-		memb_milliseconds_constraint_8,
+		memb_time_Milliseconds_qty_constraint_8,
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
-		"milliseconds"
+		"time-Milliseconds-qty"
 		},
 };
-static const asn_TYPE_tag2member_t asn_MAP_time_SecondFractions_tag2el_8[] = {
-    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* deci-seconds */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* centi-seconds */
-    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* milliseconds */
+static const asn_TYPE_tag2member_t asn_MAP_secondFractions_tag2el_8[] = {
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* time-Deciseconds-qty */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 }, /* time-Centiseconds-qty */
+    { (ASN_TAG_CLASS_CONTEXT | (2 << 2)), 2, 0, 0 } /* time-Milliseconds-qty */
 };
-static asn_CHOICE_specifics_t asn_SPC_time_SecondFractions_specs_8 = {
-	sizeof(struct Time__time_SecondFractions),
-	offsetof(struct Time__time_SecondFractions, _asn_ctx),
-	offsetof(struct Time__time_SecondFractions, present),
-	sizeof(((struct Time__time_SecondFractions *)0)->present),
-	asn_MAP_time_SecondFractions_tag2el_8,
+static asn_CHOICE_specifics_t asn_SPC_secondFractions_specs_8 = {
+	sizeof(struct Time__secondFractions),
+	offsetof(struct Time__secondFractions, _asn_ctx),
+	offsetof(struct Time__secondFractions, present),
+	sizeof(((struct Time__secondFractions *)0)->present),
+	asn_MAP_secondFractions_tag2el_8,
 	3,	/* Count of tags in the map */
 	0,
 	3	/* Extensions start */
 };
 static /* Use -fall-defs-global to expose */
-asn_TYPE_descriptor_t asn_DEF_time_SecondFractions_8 = {
-	"time-SecondFractions",
-	"time-SecondFractions",
+asn_TYPE_descriptor_t asn_DEF_secondFractions_8 = {
+	"secondFractions",
+	"secondFractions",
 	CHOICE_free,
 	CHOICE_print,
 	CHOICE_constraint,
@@ -398,9 +398,9 @@ asn_TYPE_descriptor_t asn_DEF_time_SecondFractions_8 = {
 	0,	/* No tags (pointer) */
 	0,	/* No tags (count) */
 	0,	/* No PER visible constraints */
-	asn_MBR_time_SecondFractions_8,
+	asn_MBR_secondFractions_8,
 	3,	/* Elements count */
-	&asn_SPC_time_SecondFractions_specs_8	/* Additional specs */
+	&asn_SPC_secondFractions_specs_8	/* Additional specs */
 };
 
 static int asn_DFL_14_set_0(int set_value, void **sptr) {
@@ -439,47 +439,47 @@ static int asn_DFL_15_set_0(int set_value, void **sptr) {
 		return (*st == 0);
 	}
 }
-static asn_TYPE_member_t asn_MBR_time_Timezone_13[] = {
-	{ ATF_NOFLAGS, 2, offsetof(struct Time__time_Timezone, timezone_Hour_qty),
+static asn_TYPE_member_t asn_MBR_timezone_13[] = {
+	{ ATF_NOFLAGS, 2, offsetof(struct Time__timezone, time_TimeZoneHour_qty),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
-		memb_timezone_Hour_qty_constraint_13,
+		memb_time_TimeZoneHour_qty_constraint_13,
 		0,	/* PER is not compiled, use -gen-PER */
 		asn_DFL_14_set_0,	/* DEFAULT 0 */
-		"timezone-Hour-qty"
+		"time-TimeZoneHour-qty"
 		},
-	{ ATF_NOFLAGS, 1, offsetof(struct Time__time_Timezone, time_Minute_qty),
+	{ ATF_NOFLAGS, 1, offsetof(struct Time__timezone, time_TimeZoneMinute_qty),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
-		memb_time_Minute_qty_constraint_13,
+		memb_time_TimeZoneMinute_qty_constraint_13,
 		0,	/* PER is not compiled, use -gen-PER */
 		asn_DFL_15_set_0,	/* DEFAULT 0 */
-		"time-Minute-qty"
+		"time-TimeZoneMinute-qty"
 		},
 };
-static const ber_tlv_tag_t asn_DEF_time_Timezone_tags_13[] = {
+static const ber_tlv_tag_t asn_DEF_timezone_tags_13[] = {
 	(ASN_TAG_CLASS_CONTEXT | (7 << 2)),
 	(ASN_TAG_CLASS_UNIVERSAL | (16 << 2))
 };
-static const asn_TYPE_tag2member_t asn_MAP_time_Timezone_tag2el_13[] = {
-    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* timezone-Hour-qty */
-    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* time-Minute-qty */
+static const asn_TYPE_tag2member_t asn_MAP_timezone_tag2el_13[] = {
+    { (ASN_TAG_CLASS_CONTEXT | (0 << 2)), 0, 0, 0 }, /* time-TimeZoneHour-qty */
+    { (ASN_TAG_CLASS_CONTEXT | (1 << 2)), 1, 0, 0 } /* time-TimeZoneMinute-qty */
 };
-static asn_SEQUENCE_specifics_t asn_SPC_time_Timezone_specs_13 = {
-	sizeof(struct Time__time_Timezone),
-	offsetof(struct Time__time_Timezone, _asn_ctx),
-	asn_MAP_time_Timezone_tag2el_13,
+static asn_SEQUENCE_specifics_t asn_SPC_timezone_specs_13 = {
+	sizeof(struct Time__timezone),
+	offsetof(struct Time__timezone, _asn_ctx),
+	asn_MAP_timezone_tag2el_13,
 	2,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
 	-1,	/* Start extensions */
 	-1	/* Stop extensions */
 };
 static /* Use -fall-defs-global to expose */
-asn_TYPE_descriptor_t asn_DEF_time_Timezone_13 = {
-	"time-Timezone",
-	"time-Timezone",
+asn_TYPE_descriptor_t asn_DEF_timezone_13 = {
+	"timezone",
+	"timezone",
 	SEQUENCE_free,
 	SEQUENCE_print,
 	SEQUENCE_constraint,
@@ -489,20 +489,20 @@ asn_TYPE_descriptor_t asn_DEF_time_Timezone_13 = {
 	SEQUENCE_encode_xer,
 	0, 0,	/* No PER support, use "-gen-PER" to enable */
 	0,	/* Use generic outmost tag fetcher */
-	asn_DEF_time_Timezone_tags_13,
-	sizeof(asn_DEF_time_Timezone_tags_13)
-		/sizeof(asn_DEF_time_Timezone_tags_13[0]) - 1, /* 1 */
-	asn_DEF_time_Timezone_tags_13,	/* Same as above */
-	sizeof(asn_DEF_time_Timezone_tags_13)
-		/sizeof(asn_DEF_time_Timezone_tags_13[0]), /* 2 */
+	asn_DEF_timezone_tags_13,
+	sizeof(asn_DEF_timezone_tags_13)
+		/sizeof(asn_DEF_timezone_tags_13[0]) - 1, /* 1 */
+	asn_DEF_timezone_tags_13,	/* Same as above */
+	sizeof(asn_DEF_timezone_tags_13)
+		/sizeof(asn_DEF_timezone_tags_13[0]), /* 2 */
 	0,	/* No PER visible constraints */
-	asn_MBR_time_Timezone_13,
+	asn_MBR_timezone_13,
 	2,	/* Elements count */
-	&asn_SPC_time_Timezone_specs_13	/* Additional specs */
+	&asn_SPC_timezone_specs_13	/* Additional specs */
 };
 
 static asn_TYPE_member_t asn_MBR_Time_1[] = {
-	{ ATF_POINTER, 6, offsetof(struct Time, time_Year_qty),
+	{ ATF_POINTER, 8, offsetof(struct Time, time_Year_qty),
 		(ASN_TAG_CLASS_CONTEXT | (0 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -511,7 +511,7 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		0,
 		"time-Year-qty"
 		},
-	{ ATF_POINTER, 5, offsetof(struct Time, time_Month_qty),
+	{ ATF_POINTER, 7, offsetof(struct Time, time_Month_qty),
 		(ASN_TAG_CLASS_CONTEXT | (1 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -520,7 +520,7 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		0,
 		"time-Month-qty"
 		},
-	{ ATF_POINTER, 4, offsetof(struct Time, time_Day_qty),
+	{ ATF_POINTER, 6, offsetof(struct Time, time_Day_qty),
 		(ASN_TAG_CLASS_CONTEXT | (2 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -529,7 +529,7 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		0,
 		"time-Day-qty"
 		},
-	{ ATF_NOFLAGS, 3, offsetof(struct Time, time_Hour_qty),
+	{ ATF_NOFLAGS, 5, offsetof(struct Time, time_Hour_qty),
 		(ASN_TAG_CLASS_CONTEXT | (3 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -538,7 +538,7 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		asn_DFL_5_set_0,	/* DEFAULT 0 */
 		"time-Hour-qty"
 		},
-	{ ATF_NOFLAGS, 2, offsetof(struct Time, time_Minute_qty),
+	{ ATF_NOFLAGS, 4, offsetof(struct Time, time_Minute_qty),
 		(ASN_TAG_CLASS_CONTEXT | (4 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -547,7 +547,7 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		asn_DFL_6_set_0,	/* DEFAULT 0 */
 		"time-Minute-qty"
 		},
-	{ ATF_NOFLAGS, 1, offsetof(struct Time, time_Second_qty),
+	{ ATF_NOFLAGS, 3, offsetof(struct Time, time_Second_qty),
 		(ASN_TAG_CLASS_CONTEXT | (5 << 2)),
 		-1,	/* IMPLICIT tag at current level */
 		&asn_DEF_NativeInteger,
@@ -556,23 +556,23 @@ static asn_TYPE_member_t asn_MBR_Time_1[] = {
 		asn_DFL_7_set_0,	/* DEFAULT 0 */
 		"time-Second-qty"
 		},
-	{ ATF_NOFLAGS, 0, offsetof(struct Time, time_SecondFractions),
+	{ ATF_POINTER, 2, offsetof(struct Time, secondFractions),
 		(ASN_TAG_CLASS_CONTEXT | (6 << 2)),
 		+1,	/* EXPLICIT tag at current level */
-		&asn_DEF_time_SecondFractions_8,
+		&asn_DEF_secondFractions_8,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
-		"time-SecondFractions"
+		"secondFractions"
 		},
-	{ ATF_POINTER, 1, offsetof(struct Time, time_Timezone),
+	{ ATF_POINTER, 1, offsetof(struct Time, timezone),
 		(ASN_TAG_CLASS_CONTEXT | (7 << 2)),
 		0,
-		&asn_DEF_time_Timezone_13,
+		&asn_DEF_timezone_13,
 		0,	/* Defer constraints checking to the member type */
 		0,	/* PER is not compiled, use -gen-PER */
 		0,
-		"time-Timezone"
+		"timezone"
 		},
 };
 static const ber_tlv_tag_t asn_DEF_Time_tags_1[] = {
@@ -585,8 +585,8 @@ static const asn_TYPE_tag2member_t asn_MAP_Time_tag2el_1[] = {
     { (ASN_TAG_CLASS_CONTEXT | (3 << 2)), 3, 0, 0 }, /* time-Hour-qty */
     { (ASN_TAG_CLASS_CONTEXT | (4 << 2)), 4, 0, 0 }, /* time-Minute-qty */
     { (ASN_TAG_CLASS_CONTEXT | (5 << 2)), 5, 0, 0 }, /* time-Second-qty */
-    { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 6, 0, 0 }, /* time-SecondFractions */
-    { (ASN_TAG_CLASS_CONTEXT | (7 << 2)), 7, 0, 0 } /* time-Timezone */
+    { (ASN_TAG_CLASS_CONTEXT | (6 << 2)), 6, 0, 0 }, /* secondFractions */
+    { (ASN_TAG_CLASS_CONTEXT | (7 << 2)), 7, 0, 0 } /* timezone */
 };
 static asn_SEQUENCE_specifics_t asn_SPC_Time_specs_1 = {
 	sizeof(struct Time),
@@ -594,8 +594,8 @@ static asn_SEQUENCE_specifics_t asn_SPC_Time_specs_1 = {
 	asn_MAP_Time_tag2el_1,
 	8,	/* Count of tags in the map */
 	0, 0, 0,	/* Optional elements (not needed) */
-	7,	/* Start extensions */
-	9	/* Stop extensions */
+	-1,	/* Start extensions */
+	-1	/* Stop extensions */
 };
 asn_TYPE_descriptor_t asn_DEF_Time = {
 	"Time",

@@ -170,16 +170,19 @@ func main() {
             generatedInnerBytes, err3 := ber.MarshalWithParams(loopData, "tag:1")
         
             check(err3)
-            
+
             // and add it into the header
             // we need to set the tag to 2 for the ipmstscdDetInformation structure
             t.IpmstscdDetData[0].IpmstscdDetInformation = ber.RawValue{Class: ber.ClassContextSpecific, Tag: 2, IsCompound: true, Bytes: generatedInnerBytes}
         
         }
-    
+        fmt.Printf("t: %+v \n",t)    
+        
         // and now generate the whole messgage
         generatedBytes, err := ber.Marshal(t)    
         
+        fmt.Printf("generatedBytes: %+v \n",generatedBytes)    
+            
         
         err = os.WriteFile("../golang-detector.ber", generatedBytes, 0644)
         check(err)

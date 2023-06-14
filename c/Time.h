@@ -21,14 +21,14 @@ extern "C" {
 #endif
 
 /* Dependencies */
-typedef enum Time__time_SecondFractions_PR {
-	Time__time_SecondFractions_PR_NOTHING,	/* No components present */
-	Time__time_SecondFractions_PR_deci_seconds,
-	Time__time_SecondFractions_PR_centi_seconds,
-	Time__time_SecondFractions_PR_milliseconds,
+typedef enum Time__secondFractions_PR {
+	Time__secondFractions_PR_NOTHING,	/* No components present */
+	Time__secondFractions_PR_time_Deciseconds_qty,
+	Time__secondFractions_PR_time_Centiseconds_qty,
+	Time__secondFractions_PR_time_Milliseconds_qty,
 	/* Extensions may appear below */
 	
-} Time__time_SecondFractions_PR;
+} Time__secondFractions_PR;
 
 /* Time */
 typedef struct Time {
@@ -38,12 +38,12 @@ typedef struct Time {
 	long	 time_Hour_qty	/* DEFAULT 0 */;
 	long	 time_Minute_qty	/* DEFAULT 0 */;
 	long	 time_Second_qty	/* DEFAULT 0 */;
-	struct Time__time_SecondFractions {
-		Time__time_SecondFractions_PR present;
-		union Time__time_SecondFractions_u {
-			long	 deci_seconds;
-			long	 centi_seconds;
-			long	 milliseconds;
+	struct Time__secondFractions {
+		Time__secondFractions_PR present;
+		union Time__secondFractions_u {
+			long	 time_Deciseconds_qty;
+			long	 time_Centiseconds_qty;
+			long	 time_Milliseconds_qty;
 			/*
 			 * This type is extensible,
 			 * possible extensions are below.
@@ -52,18 +52,14 @@ typedef struct Time {
 		
 		/* Context for parsing across buffer boundaries */
 		asn_struct_ctx_t _asn_ctx;
-	} time_SecondFractions;
-	struct Time__time_Timezone {
-		long	 timezone_Hour_qty	/* DEFAULT 0 */;
-		long	 time_Minute_qty	/* DEFAULT 0 */;
+	} *secondFractions;
+	struct Time__timezone {
+		long	 time_TimeZoneHour_qty	/* DEFAULT 0 */;
+		long	 time_TimeZoneMinute_qty	/* DEFAULT 0 */;
 		
 		/* Context for parsing across buffer boundaries */
 		asn_struct_ctx_t _asn_ctx;
-	} *time_Timezone;
-	/*
-	 * This type is extensible,
-	 * possible extensions are below.
-	 */
+	} *timezone;
 	
 	/* Context for parsing across buffer boundaries */
 	asn_struct_ctx_t _asn_ctx;

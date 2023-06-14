@@ -3,16 +3,16 @@ package IPMTSCD
 import "github.com/TOPAS-2545/ber"
 
 type Time struct {
-	Time_Year_qty		int64		`asn1:"optional,tag:0"`
-	Time_Month_qty		int64		`asn1:"optional,tag:1"`
-	Time_Day_qty		int64		`asn1:"optional,tag:2"`
-	Time_Hour_qty		int64		`asn1:"optional,tag:3"`
-	Time_Minute_qty		int64		`asn1:"optional,tag:4"`
-	Time_Second_qty		int64		`asn1:"optional,tag:5"`
-	Time_SecondFractions	ber.RawValue	`asn1:"explicit,tag:6"`
-	Time_Timezone		struct {
-		Timezone_Hour_qty	int64	`asn1:"optional,tag:0"`
-		Time_Minute_qty		int64	`asn1:"optional,tag:1"`
+	Time_Year_qty	int64		`asn1:"optional,tag:0"`
+	Time_Month_qty	int64		`asn1:"optional,tag:1"`
+	Time_Day_qty	int64		`asn1:"optional,tag:2"`
+	Time_Hour_qty	int64		`asn1:"optional,tag:3"`
+	Time_Minute_qty	int64		`asn1:"optional,tag:4"`
+	Time_Second_qty	int64		`asn1:"optional,tag:5"`
+	SecondFractions	ber.RawValue	`asn1:"optional,tag:6"`
+	Timezone	struct {
+		Time_TimeZoneHour_qty	int64	`asn1:"optional,tag:0"`
+		Time_TimeZoneMinute_qty	int64	`asn1:"optional,tag:1"`
 	}	`asn1:"optional,tag:7"`
 }
 type IPMSTSCDData struct {
