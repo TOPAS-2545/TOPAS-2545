@@ -40,6 +40,10 @@
                     <time-SecondFractions>
                         <milliseconds>100</milliseconds>
                     </time-SecondFractions>
+                    <time-Timezone>
+                        <timezone-Hour-qty>1</timezone-Hour-qty>
+                        <time-Minute-qty>0</time-Minute-qty>
+                    </time-Timezone>
                 </otdv-CurrentTime>
                 <otdv-LocationLongitude>11110</otdv-LocationLongitude>
                 <otdv-LocationLatitude>50747549</otdv-LocationLatitude>

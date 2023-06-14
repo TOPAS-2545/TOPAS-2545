@@ -40,6 +40,10 @@
                 "time-Second-qty": 44,
                 "time-SecondFractions": {
                     "milliseconds": 100
+                },
+                "time-Timezone": {
+                    "timezone-Hour-qty": 1,
+                    "time-Minute-qty": 0
                 }
             },
             "otdv-LocationLongitude": 11110,
