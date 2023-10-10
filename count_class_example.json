@@ -1,0 +1,40 @@
+{
+  "detectorController-index": 1,
+  "ipmstscdDetData": [
+    {
+      "ipmstscdDetID": 0,
+      "ipmstscdDetType": "loopTypeDetector",
+      "ipmstscdDetInformation": {
+        "loopTypeDetInf": {
+          "loopDataDuration": 900,
+          "loopOccupancyState": false,
+          "loopOccupancyStateDuration": 2000,
+          "loopOccupancyPreviousStateDuration": 3300,
+          "loopOccupancyRate": 10.8,
+          "loopVolume": 3,
+          "loopSpeed": 10.3,
+          "loopTargetType": 7,
+          "loopDirectionDiscrimination": true
+        }
+      }
+    },
+    
+    {
+      "ipmstscdDetID": 1,
+      "ipmstscdDetType": "loopTypeDetector",
+      "ipmstscdDetInformation": {
+        "loopTypeDetInf": {
+          "loopDataDuration": 900,
+          "loopOccupancyState": true,
+          "loopOccupancyStateDuration": 6000,
+          "loopOccupancyPreviousStateDuration": 5000,
+          "loopOccupancyRate": 30.8,
+          "loopVolume": 30,
+          "loopSpeed": 10.3,
+          "loopTargetType": 1,
+          "loopDirectionDiscrimination": true
+        }
+      }
+    }
+  ]
+}

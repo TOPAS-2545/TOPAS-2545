@@ -1,0 +1,95 @@
+
+detectorController-index: 1
+ipmstscdDetData: 
+    - # Detector ID 0
+      ipmstscdDetID: 0
+      # Is a loop/zone type detector
+      ipmstscdDetType: loopTypeDetector
+      
+      # and information
+      ipmstscdDetInformation: 
+      
+        # loop/zone detection information
+        loopTypeDetInf: 
+        
+            # Duration for collecting current data (sec)
+            loopDataDuration: 900
+            
+            # Current state of occupancy (BOOLEAN) (state)
+            loopOccupancyState: false
+            
+            # Current duration of occupancy (millisecond) (state)
+            loopOccupancyStateDuration: 2000
+            
+            # Duration of previous state of occupancy (millisecond) (state)
+            loopOccupancyPreviousStateDuration: 3300
+            
+            # Occupancy rate of detection period (%) (cycle)
+            loopOccupancyRate: 10.8
+            
+            # Traffic volume of detection period (number of vehicles) (cycle)
+            loopVolume: 3
+            
+            # Average speed of detection period (km/h) (cycle)
+            loopSpeed: 10.3           
+            
+            # Vehicle classification EURO6:
+            # Motorbike
+            # Car / Minivan
+            # Trailer
+            # Large Van
+            # HGV
+            # Bus
+            # Bicycle
+            # Pedestrian
+            loopTargetType: 7
+
+            # true if approaching intersection, false if leaving intersection
+            loopDirectionDiscrimination: true            
+
+    - # Detector ID 1
+      ipmstscdDetID: 1
+      # Is a loop/zone type detector
+      ipmstscdDetType: loopTypeDetector
+      
+      # and information
+      ipmstscdDetInformation: 
+      
+        # loop/zone detection information
+        loopTypeDetInf: 
+        
+            # Duration for collecting current data (sec)
+            loopDataDuration: 900
+            
+            # Current state of occupancy (BOOLEAN) (state)
+            loopOccupancyState: true
+            
+            # Current duration of occupancy (millisecond) (state)
+            loopOccupancyStateDuration: 6000
+            
+            # Duration of previous state of occupancy (millisecond) (state)
+            loopOccupancyPreviousStateDuration: 5000
+            
+            # Occupancy rate of detection period (%) (cycle)
+            loopOccupancyRate: 30.8
+            
+            # Traffic volume of detection period (number of vehicles) (cycle)
+            loopVolume: 30
+            
+            # Average speed of detection period (km/h) (cycle)
+            loopSpeed: 10
+            
+            # Vehicle classification EURO6:
+            # Motorbike
+            # Car / Minivan
+            # Trailer
+            # Large Van
+            # HGV
+            # Bus
+            # Bicycle
+            # Pedestrian
+            loopTargetType: 1
+            
+            # true if approaching intersection, false if leaving intersection
+            loopDirectionDiscrimination: true
+            
