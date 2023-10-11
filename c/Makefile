@@ -1,11 +1,13 @@
 ASN_MODULE_SOURCES=	\
 	IPMSTSCDData.c	\
+	DetectorControllerInformation.c	\
 	GeneralTimeLocationCore.c	\
 	IpmstscdDetDataSeq.c	\
-	IpmstscdLoopTypeDetectorInformation.c	\
+	IpmstscdOccTypeDetectorInformation.c	\
 	IpmstscdImageTypeDetectorInformation.c	\
 	IpmstscdIDTypeDetectorInformation.c	\
 	IpmstscdOccNoccHistory.c	\
+	Time.c	\
 	IpmstscdIDTypeDetectorInformationType2.c	\
 	VehicleInfoSeq.c	\
 	IpmstscdImageTypeDetectorInformationType2.c	\
@@ -13,17 +15,18 @@ ASN_MODULE_SOURCES=	\
 	IpmstscdOccTypeDetectorInformationType2.c	\
 	Det-AccmulatedSeq.c	\
 	Det-SerialInfoSeq.c	\
-	Det-VelocitySeq.c	\
-	Time.c
+	Det-VelocitySeq.c
 
 ASN_MODULE_HEADERS=	\
 	IPMSTSCDData.h	\
+	DetectorControllerInformation.h	\
 	GeneralTimeLocationCore.h	\
 	IpmstscdDetDataSeq.h	\
-	IpmstscdLoopTypeDetectorInformation.h	\
+	IpmstscdOccTypeDetectorInformation.h	\
 	IpmstscdImageTypeDetectorInformation.h	\
 	IpmstscdIDTypeDetectorInformation.h	\
 	IpmstscdOccNoccHistory.h	\
+	Time.h	\
 	IpmstscdIDTypeDetectorInformationType2.h	\
 	VehicleInfoSeq.h	\
 	IpmstscdImageTypeDetectorInformationType2.h	\
@@ -31,8 +34,7 @@ ASN_MODULE_HEADERS=	\
 	IpmstscdOccTypeDetectorInformationType2.h	\
 	Det-AccmulatedSeq.h	\
 	Det-SerialInfoSeq.h	\
-	Det-VelocitySeq.h	\
-	Time.h
+	Det-VelocitySeq.h
 
 ASN_MODULE_HEADERS+=BOOLEAN.h
 ASN_MODULE_SOURCES+=BOOLEAN.c
