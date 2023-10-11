@@ -1,38 +1,39 @@
 {
-  "detectorController-index": 1,
+  "detectorControllerInformation": {
+    "detectorController-index": 1
+  },
   "ipmstscdDetData": [
     {
       "ipmstscdDetID": 0,
-      "ipmstscdDetType": "loopTypeDetector",
+      "ipmstscdDetType": "occupancyTypeDetector",
       "ipmstscdDetInformation": {
-        "loopTypeDetInf": {
-          "loopDataDuration": 900,
-          "loopOccupancyState": false,
-          "loopOccupancyStateDuration": 2000,
-          "loopOccupancyPreviousStateDuration": 3300,
-          "loopOccupancyRate": 10.8,
-          "loopVolume": 3,
-          "loopSpeed": 10.3,
-          "loopTargetType": 7,
-          "loopDirectionDiscrimination": true
+        "occupancyTypeDetInf": {
+          "occupancyDataDuration": 900,
+          "occupancyState": false,
+          "occupancyStateDuration": 2000,
+          "occupancyPreviousStateDuration": 3300,
+          "occupancyRate": 10.8,
+          "occupancyVolume": 3,
+          "occupancySpeed": 10.3,
+          "targetType": 7,
+          "directionDiscrimination": true
         }
       }
     },
-    
     {
       "ipmstscdDetID": 1,
-      "ipmstscdDetType": "loopTypeDetector",
+      "ipmstscdDetType": "occupancyTypeDetector",
       "ipmstscdDetInformation": {
-        "loopTypeDetInf": {
-          "loopDataDuration": 900,
-          "loopOccupancyState": true,
-          "loopOccupancyStateDuration": 6000,
-          "loopOccupancyPreviousStateDuration": 5000,
-          "loopOccupancyRate": 30.8,
-          "loopVolume": 30,
-          "loopSpeed": 10.3,
-          "loopTargetType": 1,
-          "loopDirectionDiscrimination": true
+        "occupancyTypeDetInf": {
+          "occupancyDataDuration": 900,
+          "occupancyState": true,
+          "occupancyStateDuration": 6000,
+          "occupancyPreviousStateDuration": 5000,
+          "occupancyRate": 30.8,
+          "occupancyVolume": 30,
+          "occupancySpeed": 10.3,
+          "targetType": 1,
+          "directionDiscrimination": true
         }
       }
     }

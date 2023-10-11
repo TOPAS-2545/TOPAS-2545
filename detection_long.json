@@ -1,20 +1,21 @@
 {
-    "detectorController-index": 1,
-    
+    "detectorControllerInformation": {
+        "detectorController-index": 2
+    },
     "ipmstscdDetData": [{
         "ipmstscdDetID": 0,
-        "ipmstscdDetType": "loopTypeDetector",
+        "ipmstscdDetType": "occupancyTypeDetector",
                 
         "ipmstscdDetInformation": {
-            "loopTypeDetInf": {
-                "loopDataDuration": 55,
-                "loopOccupancyState": true,
-                "loopOccupancyStateDuration": 33,
-                "loopOccupancyPreviousStateDuration": 33,
-                "loopOccupancyRate": 55.8,
-                "loopSpeed": 10.3,
-                "loopVolume": 70,
-                "loopOccNoccHistory": [
+            "occupancyTypeDetInf": {
+                "occupancyDataDuration": 55,
+                "occupancyState": true,
+                "occupancyStateDuration": 33,
+                "occupancyPreviousStateDuration": 33,
+                "occupancyRate": 55.8,
+                "occupancyVolume": 10,
+                "occupancySpeed": 70.3,
+                "occNoccHistory": [
                     {
                         "occupancyTimes": 2, 
                         "nonOccupancyTimes": 4 
@@ -24,31 +25,31 @@
                         "nonOccupancyTimes": 5 
                     }                               
                 ],             
-                "loopUserData": "01020304",
-                "loopTargetType": 3,
-                "loopErrorState": "managementNeeded",
-                "loopDirectionDiscrimination": true
+                "userData": "01020304",
+                "targetType": 3,
+                "occupancyErrorState": "managementNeeded",
+                "directionDiscrimination": true
             }   
         },
         "detector-Time-Location": {
-            "otdv-CurrentTime": {
+            "currentTime": {
                 "time-Year-qty": 2022,
                 "time-Month-qty": 9,
                 "time-Day-qty": 8,
                 "time-Hour-qty": 8,
                 "time-Minute-qty": 7,
                 "time-Second-qty": 44,
-                "secondFractions": {
-                    "time-Milliseconds-qty": 100
+                "time-SecondFractions": {
+                    "milliseconds": 100
                 },
-                "timezone": {
-                    "time-TimeZoneHour-qty": 1,
-                    "time-TimeZoneMinute-qty": 0
+                "time-Timezone": {
+                    "timezone-Hour-qty": 1,
+                    "time-Minute-qty": 0
                 }
             },
-            "otdv-LocationLongitude": 11110,
-            "otdv-LocationLatitude": 50747549,
-            "otdv-LocationElevation": -1992
+            "locationLongitude": 11110,
+            "locationLatitude": 50747549,
+            "locationElevation": -1992
             
         }
     }]

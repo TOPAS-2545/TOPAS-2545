@@ -21,3 +21,4 @@
 # SOFTWARE.
 
 asn1tools
+pyyaml

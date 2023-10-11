@@ -21,7 +21,8 @@
 # SOFTWARE.
 
 
-ASNFILES=Annex_A_10711_v2.0.asn ISO14927-1.asn
+#ASNFILES=Annex_A_10711_v2.0.asn ISO14927-1.asn
+ASNFILES=DataPacketStructuresV3MarkRetallack.asn
 
 SRC_JSONFILE=detection_long.json
 

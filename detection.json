@@ -2,14 +2,14 @@
     "detectorController-index": 1,
     "ipmstscdDetData": [{
         "ipmstscdDetID": 0,
-        "ipmstscdDetType": "loopTypeDetector",
+        "ipmstscdDetType": "occupancyTypeDetector",
         "ipmstscdDetInformation": {
-            "loopTypeDetInf": {
-                "loopOccupancyState": true,
-                "loopOccupancyStateDuration": 33,
-                "loopOccupancyPreviousStateDuration": 33,
-                "loopOccupancyRate": 55.8,
-                "loopVolume": 70
+            "occupancyTypeDetInf": {
+                "occupancyState": true,
+                "occupancyStateDuration": 33,
+                "occupancyPreviousStateDuration": 33,
+                "occupancyRate": 55.8,
+                "occupancyVolume": 70
             }   
         }
     }]

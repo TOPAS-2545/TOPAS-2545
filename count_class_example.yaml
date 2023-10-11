@@ -1,37 +1,39 @@
 
-detectorController-index: 1
+detectorControllerInformation:
+    detectorController-index: 1
+    
 ipmstscdDetData: 
     - # Detector ID 0
       ipmstscdDetID: 0
-      # Is a loop/zone type detector
-      ipmstscdDetType: loopTypeDetector
+      # Is a occ/zone type detector
+      ipmstscdDetType: occupancyTypeDetector
       
       # and information
       ipmstscdDetInformation: 
       
         # loop/zone detection information
-        loopTypeDetInf: 
+        occupancyTypeDetInf: 
         
             # Duration for collecting current data (sec)
-            loopDataDuration: 900
+            occupancyDataDuration: 900
             
             # Current state of occupancy (BOOLEAN) (state)
-            loopOccupancyState: false
+            occupancyState: false
             
             # Current duration of occupancy (millisecond) (state)
-            loopOccupancyStateDuration: 2000
+            occupancyStateDuration: 2000
             
             # Duration of previous state of occupancy (millisecond) (state)
-            loopOccupancyPreviousStateDuration: 3300
+            occupancyPreviousStateDuration: 3300
             
             # Occupancy rate of detection period (%) (cycle)
-            loopOccupancyRate: 10.8
+            occupancyRate: 10.8
             
             # Traffic volume of detection period (number of vehicles) (cycle)
-            loopVolume: 3
+            occupancyVolume: 3
             
             # Average speed of detection period (km/h) (cycle)
-            loopSpeed: 10.3           
+            occupancySpeed: 10.3           
             
             # Vehicle classification EURO6:
             # Motorbike
@@ -42,42 +44,42 @@ ipmstscdDetData:
             # Bus
             # Bicycle
             # Pedestrian
-            loopTargetType: 7
+            targetType: 7
 
             # true if approaching intersection, false if leaving intersection
-            loopDirectionDiscrimination: true            
+            directionDiscrimination: true            
 
     - # Detector ID 1
       ipmstscdDetID: 1
       # Is a loop/zone type detector
-      ipmstscdDetType: loopTypeDetector
+      ipmstscdDetType: occupancyTypeDetector
       
       # and information
       ipmstscdDetInformation: 
       
         # loop/zone detection information
-        loopTypeDetInf: 
+        occupancyTypeDetInf: 
         
             # Duration for collecting current data (sec)
-            loopDataDuration: 900
+            occupancyDataDuration: 900
             
             # Current state of occupancy (BOOLEAN) (state)
-            loopOccupancyState: true
+            occupancyState: true
             
             # Current duration of occupancy (millisecond) (state)
-            loopOccupancyStateDuration: 6000
+            occupancyStateDuration: 6000
             
             # Duration of previous state of occupancy (millisecond) (state)
-            loopOccupancyPreviousStateDuration: 5000
+            occupancyPreviousStateDuration: 5000
             
             # Occupancy rate of detection period (%) (cycle)
-            loopOccupancyRate: 30.8
+            occupancyRate: 30.8
             
             # Traffic volume of detection period (number of vehicles) (cycle)
-            loopVolume: 30
+            occupancyVolume: 30
             
             # Average speed of detection period (km/h) (cycle)
-            loopSpeed: 10
+            occupancySpeed: 10.3
             
             # Vehicle classification EURO6:
             # Motorbike
@@ -88,8 +90,8 @@ ipmstscdDetData:
             # Bus
             # Bicycle
             # Pedestrian
-            loopTargetType: 1
+            targetType: 1
             
             # true if approaching intersection, false if leaving intersection
-            loopDirectionDiscrimination: true
+            directionDiscrimination: true
             

@@ -31,6 +31,7 @@ import (
     //"bytes"
     //"io"
     //"encoding/asn1"
+    "encoding/hex"
     "fmt"
     "testapp/ipmtscd"   
     "github.com/TOPAS-2545/ber"
@@ -48,23 +49,23 @@ func create_message() {
 
     fmt.Println("Performing encode")
 
-    tryme := IPMTSCD.IpmstscdLoopTypeDetectorInformation{
-                    LoopOccupancyState: true,
-                    LoopOccupancyStateDuration: 33,
-                    LoopOccupancyPreviousStateDuration: 33,
-                    LoopOccupancyRate: 55.8,
-                    LoopVolume: 70,
+    tryme := IPMTSCD.IpmstscdOccTypeDetectorInformation{
+                    OccupancyState: true,
+                    OccupancyStateDuration: 33,
+                    OccupancyPreviousStateDuration: 33,
+                    OccupancyRate: 55.8,
+                    OccupancyVolume: 77,
                 }
             
     // and now generate it, we need to add the TAG=1 for the ipmstscdDetInformation
-    // type, so that tag=1 for loopTypeDetInf, tag=2 for imageTypeDetInf and 
+    // type, so that tag=1 for occupancyTypeDetInf, tag=2 for imageTypeDetInf and 
     // tag=3 for idTypeDetInfo      
     generatedInnerBytes, err := ber.MarshalWithParams(tryme,"tag:1")
     
     fmt.Printf("generatedInnerBytes: %+v \n",generatedInnerBytes)
     
     if err != nil {
-        fmt.Println("Failed to unmarshall message: ", err.Error())
+        fmt.Println("Failed to marshall message: ", err.Error())
     }
 
     ipmstscdDetData := []IPMTSCD.IpmstscdDetDataSeq {
@@ -81,8 +82,12 @@ func create_message() {
     
     expected := IPMTSCD.IPMSTSCDData{
 
-        DetectorController_index: 1,
+		// add in the detector controller information
+        DetectorControllerInformation: IPMTSCD.DetectorControllerInformation{
+            DetectorController_index: 5,
+        },
             
+        // and add the Detector Data
         IpmstscdDetData: ipmstscdDetData,
     }
 
@@ -131,43 +136,37 @@ func main() {
         
         if len(t.IpmstscdDetData)>0 {
             
-            
             if t.IpmstscdDetData[0].IpmstscdDetType != 0 {
                 panic("Not correct Detector type")        
-            }
+            }            
             
-            fmt.Printf("IpmstscdDetData[0].IpmstscdDetInformation: %+v \n",t.IpmstscdDetData[0].IpmstscdDetInformation)
+            var occData IPMTSCD.IpmstscdOccTypeDetectorInformation 
             
-            var loopData IPMTSCD.IpmstscdLoopTypeDetectorInformation 
-            
-            // we know this is a loopTypeDetInf type, so tell the unmarchal that we will
-            // expect a tag=1 (loopTypeDetInf)
-            _, err2 := ber.UnmarshalWithParams(t.IpmstscdDetData[0].IpmstscdDetInformation.Bytes, &loopData, "tag:1")
+            fmt.Printf(hex.Dump(t.IpmstscdDetData[0].IpmstscdDetInformation.Bytes))
+
+            // we know this is a occupancyTypeDetInf type, so tell the unmarchal that we will
+            // expect a tag=1 (occupancyTypeDetInf)
+            _, err2 := ber.UnmarshalWithParams(t.IpmstscdDetData[0].IpmstscdDetInformation.Bytes, &occData, "tag:1")
             
             check(err2)
             
-            fmt.Printf("loopData: %+v \n",loopData)    
-            
-            
             // now check the fields are correct         
-            if loopData.LoopOccupancyState != true {
-                fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyState not correct\n")
+            if occData.OccupancyState != true {
+                fmt.Fprintf(os.Stderr, "occData.OccupancyState not correct\n")
                 os.Exit(1)
             }
                      
-            if loopData.LoopOccupancyStateDuration != 33 {
-                fmt.Fprintf(os.Stderr, "loopData.LoopOccupancyStateDuration not correct\n")
+            if occData.OccupancyStateDuration != 33 {
+                fmt.Fprintf(os.Stderr, "occData.OccupancyStateDuration not correct\n")
                 os.Exit(1)
             }        
             
-            
             //-------------------------------------------
-            
             
             // and now re-generate it, we need to add the TAG=1 for the ipmstscdDetInformation
             // type, so that tag=1 for loopTypeDetInf, tag=2 for imageTypeDetInf and 
             // tag=3 for idTypeDetInfo        
-            generatedInnerBytes, err3 := ber.MarshalWithParams(loopData, "tag:1")
+            generatedInnerBytes, err3 := ber.MarshalWithParams(occData, "tag:1")
         
             check(err3)
 
@@ -181,7 +180,7 @@ func main() {
         // and now generate the whole messgage
         generatedBytes, err := ber.Marshal(t)    
         
-        fmt.Printf("generatedBytes: %+v \n",generatedBytes)    
+        //fmt.Printf("generatedBytes: %+v \n",generatedBytes)    
             
         
         err = os.WriteFile("../golang-detector.ber", generatedBytes, 0644)
