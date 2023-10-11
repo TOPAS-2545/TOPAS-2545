@@ -1,19 +1,21 @@
 <IPMSTSCDData>
-    <detectorController-index>1</detectorController-index>
+    <detectorControllerInformation>
+        <detectorController-index>2</detectorController-index>
+    </detectorControllerInformation>
     <ipmstscdDetData>
         <IpmstscdDetDataSeq>
             <ipmstscdDetID>0</ipmstscdDetID>
-            <ipmstscdDetType><loopTypeDetector/></ipmstscdDetType>
+            <ipmstscdDetType><occupancyTypeDetector/></ipmstscdDetType>
             <ipmstscdDetInformation>
-                <loopTypeDetInf>
-                    <loopDataDuration>55</loopDataDuration>
-                    <loopOccupancyState><true/></loopOccupancyState>
-                    <loopOccupancyStateDuration>33</loopOccupancyStateDuration>
-                    <loopOccupancyPreviousStateDuration>33</loopOccupancyPreviousStateDuration>
-                    <loopOccupancyRate>55.799999999999997</loopOccupancyRate>
-                    <loopSpeed>10.300000000000001</loopSpeed>
-                    <loopVolume>70</loopVolume>
-                    <loopOccNoccHistory>
+                <occupancyTypeDetInf>
+                    <occupancyDataDuration>55</occupancyDataDuration>
+                    <occupancyState><true/></occupancyState>
+                    <occupancyStateDuration>33</occupancyStateDuration>
+                    <occupancyPreviousStateDuration>33</occupancyPreviousStateDuration>
+                    <occupancyRate>55.799999999999997</occupancyRate>
+                    <occupancySpeed>70.299999999999997</occupancySpeed>
+                    <occupancyVolume>10</occupancyVolume>
+                    <occNoccHistory>
                         <IpmstscdOccNoccHistory>
                             <occupancyTimes>2</occupancyTimes>
                             <nonOccupancyTimes>4</nonOccupancyTimes>
@@ -22,32 +24,32 @@
                             <occupancyTimes>1</occupancyTimes>
                             <nonOccupancyTimes>5</nonOccupancyTimes>
                         </IpmstscdOccNoccHistory>
-                    </loopOccNoccHistory>
-                    <loopErrorState><managementNeeded/></loopErrorState>
-                    <loopUserData>01 02 03 04</loopUserData>
-                    <loopTargetType>3</loopTargetType>
-                    <loopDirectionDiscrimination><true/></loopDirectionDiscrimination>
-                </loopTypeDetInf>
+                    </occNoccHistory>
+                    <occupancyErrorState><managementNeeded/></occupancyErrorState>
+                    <userData>01 02 03 04</userData>
+                    <targetType>3</targetType>
+                    <directionDiscrimination><true/></directionDiscrimination>
+                </occupancyTypeDetInf>
             </ipmstscdDetInformation>
             <detector-Time-Location>
-                <otdv-CurrentTime>
+                <currentTime>
                     <time-Year-qty>2022</time-Year-qty>
                     <time-Month-qty>9</time-Month-qty>
                     <time-Day-qty>8</time-Day-qty>
                     <time-Hour-qty>8</time-Hour-qty>
                     <time-Minute-qty>7</time-Minute-qty>
                     <time-Second-qty>44</time-Second-qty>
-                    <secondFractions>
-                        <time-Milliseconds-qty>100</time-Milliseconds-qty>
-                    </secondFractions>
-                    <timezone>
-                        <time-TimeZoneHour-qty>1</time-TimeZoneHour-qty>
-                        <time-TimeZoneMinute-qty>0</time-TimeZoneMinute-qty>
-                    </timezone>
-                </otdv-CurrentTime>
-                <otdv-LocationLongitude>11110</otdv-LocationLongitude>
-                <otdv-LocationLatitude>50747549</otdv-LocationLatitude>
-                <otdv-LocationElevation>-1992</otdv-LocationElevation>
+                    <time-SecondFractions>
+                        <milliseconds>100</milliseconds>
+                    </time-SecondFractions>
+                    <time-Timezone>
+                        <timezone-Hour-qty>1</timezone-Hour-qty>
+                        <time-Minute-qty>0</time-Minute-qty>
+                    </time-Timezone>
+                </currentTime>
+                <locationLongitude>11110</locationLongitude>
+                <locationLatitude>50747549</locationLatitude>
+                <locationElevation>-1992</locationElevation>
             </detector-Time-Location>
         </IpmstscdDetDataSeq>
     </ipmstscdDetData>
